@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-project( OpenCVOpenNI2 )
+#project( OpenCVOpenNI2 )
 find_package( OpenCV REQUIRED )
 find_package(cvblob REQUIRED)
 
