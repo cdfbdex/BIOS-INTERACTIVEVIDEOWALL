@@ -382,12 +382,12 @@ int main(int argc, char** argv)
 
 
 	// Creating the network server
-	vrpn_Connection_IP* m_Connection = new vrpn_Connection_IP(3883);
+	//vrpn_Connection_IP* m_Connection = new vrpn_Connection_IP(3883);
 	// Creating the Analog
-	myAnalog*  serverAnalog  = new myAnalog(m_Connection );
+	//myAnalog*  serverAnalog  = new myAnalog(m_Connection );
 
 
-	cout << "Created VRPN server." << endl;
+	//cout << "Created VRPN server." << endl;
 	while(true)
 	{
 
@@ -447,9 +447,9 @@ int main(int argc, char** argv)
 		/// Call the function to initialize
 		TrackObjects( 0, 0 );
 
-		serverAnalog->setPositionXY(P);
-		serverAnalog->mainloop();
-		m_Connection->mainloop();
+		//serverAnalog->setPositionXY(P);
+		//serverAnalog->mainloop();
+		//m_Connection->mainloop();
 
 		cout<<"P0 = "<<P0<<endl;
 		int CalcularFrame = int((P0/640.0)*(float(NumberOfFrames)));

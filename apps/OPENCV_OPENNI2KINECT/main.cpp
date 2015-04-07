@@ -14,11 +14,7 @@
 
 #include <tchar.h>
 #include <math.h>
-#include "vrpn_Text.h"
-#include "vrpn_Tracker.h"
-#include "vrpn_Analog.h"
-#include "vrpn_Button.h"
-#include "vrpn_Connection.h"
+
 
 #include <iostream>
 #include <vector>
@@ -29,67 +25,7 @@ using namespace cvb;
 using namespace std;
 
 
-/////////////////////// ANALOG /////////////////////////////
 
-// your analog class must inherin from the vrpn_Analog class
-class myAnalog : public vrpn_Analog
-{
-public:
-	myAnalog( vrpn_Connection *c = 0 );
-	virtual ~myAnalog() {};
-	virtual void mainloop();
-	void setPositionXY(vector <float>);
-
-protected:
-	vector<float> PosicionXY;
-	struct timeval _timestamp;
-};
-
-
-myAnalog::myAnalog( vrpn_Connection *c /*= 0 */ ) :
-	vrpn_Analog( "Analog0", c )
-{
-	vrpn_Analog::num_channel = 2;
-
-	vrpn_uint32    i;
-
-	for (i = 0; i < (vrpn_uint32)vrpn_Analog::num_channel; i++) {
-		vrpn_Analog::channel[i] = vrpn_Analog::last[i] = 0.0;
-		PosicionXY.push_back(0.0);
-	}
-}
-
-void myAnalog::mainloop()
-{
-	vrpn_gettimeofday(&_timestamp, NULL);
-	vrpn_Analog::timestamp = _timestamp;
-
-	// forcing values to change otherwise vrpn doesn't report the changes
-	static float f = 0; f+=0.001;
-
-	for( unsigned int i=0; i<vrpn_Analog::num_channel;i++)
-	{
-		// XXX Set your values here !
-		channel[i] = PosicionXY[i];
-	}
-
-	// Send any changes out over the connection.
-	vrpn_Analog::report_changes();
-
-	server_mainloop();
-}
-
-void myAnalog::setPositionXY(vector <float> Positions)
-{
-	if (Positions.size() < (vrpn_uint32)vrpn_Analog::num_channel)
-		return;
-
-	PosicionXY.clear();
-	vrpn_uint32    i;
-	for (i = 0; i < (vrpn_uint32)vrpn_Analog::num_channel; i++) {
-		PosicionXY.push_back(Positions[i]);
-	}
-}
 
 
 int morph_elem = 0;
