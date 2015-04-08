@@ -39,7 +39,7 @@ set(CMAKE_BUILD_TYPE Release)
 
 add_subdirectory(cvBlob lib)
 #add_subdirectory(pyCvBlob pyCvBlob)
-add_subdirectory(test test)
+#add_subdirectory(test test)
 
 set(prefix  ${CMAKE_INSTALL_PREFIX})
 set(version ${CVBLOB_VERSION})
