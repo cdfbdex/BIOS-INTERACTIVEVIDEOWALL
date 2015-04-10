@@ -1,7 +1,6 @@
-#cmake_minimum_required(VERSION 2.8)
-#project( OpenCVOpenNI2 )
+# Find required packages to compile the whole project
 find_package( OpenCV REQUIRED )
-find_package(cvblob REQUIRED)
+find_package( cvblob REQUIRED)
 
 
 #######################################
@@ -40,6 +39,6 @@ link_directories( ${OPENNI2_LIBRARY} ${NITE2_LIBRARY} )
 INCLUDE_DIRECTORIES( ${OPENNI2_INCLUDE_DIR} ${NITE2_INCLUDE_DIR} )
 #target_link_libraries( project ${OPENNI2_LIBRARY} ${NITE2_LIBRARY} )
 
-add_executable( OpenCVOpenNI2 main.cpp)
-target_link_libraries( OpenCVOpenNI2 ${OpenCV_LIBS} ${OPENNI2_LIBRARY} ${NITE2_LIBRARY}  cvblob)
+add_executable( InteractiveWall1Kinect main.cpp)
+target_link_libraries( InteractiveWall1Kinect ${OpenCV_LIBS} ${OPENNI2_LIBRARY} ${NITE2_LIBRARY}  cvblob)
 
