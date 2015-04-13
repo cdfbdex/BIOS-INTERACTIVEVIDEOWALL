@@ -259,17 +259,17 @@ int main(int argc, char** argv)
 		return EXIT_FAILURE;
 	}
 
-	//Device device;											// Interface to a single sensor device connected
+	//Device device;											
 	//VideoStream color_stream, depth_stream;					// Create single video stream obtained from a device
 
 	
-	Device device[MAX_POSSIBLE_SENSORS];
-	VideoStream** streams = new openni::VideoStream*[MAX_POSSIBLE_SENSORS];
-	VideoStream color_stream[MAX_POSSIBLE_SENSORS];
-	VideoStream depth_stream[MAX_POSSIBLE_SENSORS];
-	VideoMode videoMode[MAX_POSSIBLE_SENSORS];
+	Device device[MAX_POSSIBLE_SENSORS];										// Interface to a sensor devices connected
+	VideoStream** streams = new openni::VideoStream*[MAX_POSSIBLE_SENSORS];		// Save streams from depth sensor
+	VideoStream color_stream[MAX_POSSIBLE_SENSORS];								// Save color stream // It is not used
+	VideoStream depth_stream[MAX_POSSIBLE_SENSORS];								// Save depth stream
+	VideoMode videoMode[MAX_POSSIBLE_SENSORS];									// Save video mode for sensor configuration
 
-	const char* deviceURI[MAX_POSSIBLE_SENSORS];			// Specify Uniform Resource Identifier
+	const char* deviceURI[MAX_POSSIBLE_SENSORS];			// Specify Uniform Resource Identifier of each detected device
 
 
 	// Check initialization of drivers
@@ -285,6 +285,7 @@ int main(int argc, char** argv)
 	Array<DeviceInfo> deviceInfoList;
 	OpenNI::enumerateDevices(&deviceInfoList);
 
+	// List device that are connected
 	detectedDevices = deviceInfoList.getSize();
 
 	// Check number of detected devices
@@ -337,7 +338,7 @@ int main(int argc, char** argv)
 		}
 
 		// Create VideoStream with color sensor
-		rc = color_stream[i].create(device[i], SENSOR_COLOR);			// Specify device and sensor type: (SENSOR_IR, SENSOR_COLOR, SENSOR_DEPTH)
+		rc = color_stream[i].create(device[i], SENSOR_COLOR);		// Specify device and sensor type: (SENSOR_IR, SENSOR_COLOR, SENSOR_DEPTH)
 		if (rc == STATUS_OK)
 		{
 			rc = color_stream[i].start();
@@ -400,7 +401,6 @@ int main(int argc, char** argv)
 	// Load selected video
 	char* loadVideoPath = argv[1];
 	VideoCapture cap(loadVideoPath);					// Create a video capturing from the file specified in argument 1
-	vector <Mat> Video;									// Matrix to save the specified range of video frames
 
 	// Range and quantity of frames to show in the video
 	int initialFrame, finalFrame, numberOfFrames;
@@ -491,7 +491,6 @@ int main(int argc, char** argv)
 	bool exit = false;
 	while (!exit)
 	{
-
 		// Loop for reading the images from all detected sensors
 		bool captured_allkinects = false;
 		bool kinectReaded[MAX_POSSIBLE_SENSORS] = { false };
