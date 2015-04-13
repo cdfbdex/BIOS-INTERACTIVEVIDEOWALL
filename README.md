@@ -1,29 +1,33 @@
 # BIOS-INTERACTIVEVIDEOWALL
 This is a Human Computer Interface using few Kinects to play a video according to person's position in one direction.
 
-USER GUIDE
+CONFIGURE AND BUILD
 
-1. Execute CMake in main folder to generate the project of Visual Studio 2013.
-2. Open Visual Studio project and compile it in Release mode.
-3. Open \bin\Release folder and verify that .exe has been created properly.
-4. Open \lib\Release folder, copy cvblob.dll and paste it in the folder \bin\Release.
-5. Copy the selected video in the folder \bin\Release.
+1. For windows install: CMake (2.4.8) to configure and Visual C++ (2012 or 2013) to build.
+2. Install Prerequisites: OpenCV (tested with version 2.4.9), OpenNI2 (tested with version 2.2), NITE2 (tested with version 2.2), Kinect for Windows SDK (tested with version 1.8). 
+3. Configure project with CMake and generate solution for your Visual C++.
+4. Open Visual Studio project and compile it in Release mode.
+5. Open "..\bin\Release" folder and verify that .exe has been created properly.
+6. Open "..\lib\Release" folder, copy cvblob.dll and paste it in the folder \bin\Release.
+7. Execute the program. A video is needed to run properly.
 
 EXECUTING PROGRAM
 
-Open a command window in the folder \bin\Release. And write the corresponding
+Connect all kinects you need up to 10. Open a command window in the folder "..\bin\Release" and write the corresponding
 command depending on the selected mode:
 
 MODE 1: Process all the frames of the video
-..\bin\Release\ InteractiveWallNKinect.exe VideoName.avi
-Parameters:
-  - InteractiveWallNKinect.exe: Main application
-  - VideoName.avi: Path or filename of the video with its extension
 
-MODE 2: Process a specified range of frames in the video
-..\bin\Release\ InteractiveWallNKinect.exe VideoName.avi 1800 2000
+..\bin\Release\>InteractiveWallNKinect.exe <videoname>
+
 Parameters:
   - InteractiveWallNKinect.exe: Main application
-  - VideoName.avi: Path or filename of the video with its extension
-  - 1800: Start frame of the range that should be processed in the video
-  - 2000: End frame of the range that should be processed in the video
+  - <videoname>: Any compatible video with OpenCV.
+
+MODE 2: Process a range of frames in the video. Be sure you input a properly range.
+..\bin\Release\ InteractiveWallNKinect.exe <videoname> <initialframe> <lastframe>
+Parameters:
+  - InteractiveWallNKinect.exe: Main application
+  - <videoname>: Path or filename of the video with its extension
+  - <initialframe>: Start frame of the range that should be processed in the video
+  - <lastframe>: End frame of the range that should be processed in the video
