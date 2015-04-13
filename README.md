@@ -18,14 +18,16 @@ command depending on the selected mode:
 
 MODE 1: Process all the frames of the video
 
-..\bin\Release\>InteractiveWallNKinect.exe <videoname>
+..\bin\Release\>InteractiveWallNKinect.exe [videoname]
 
 Parameters:
   - InteractiveWallNKinect.exe: Main application
   - <videoname>: Any compatible video with OpenCV.
 
 MODE 2: Process a range of frames in the video. Be sure you input a properly range.
+
 ..\bin\Release\ InteractiveWallNKinect.exe <videoname> <initialframe> <lastframe>
+
 Parameters:
   - InteractiveWallNKinect.exe: Main application
   - <videoname>: Path or filename of the video with its extension
