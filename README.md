@@ -22,7 +22,7 @@ MODE 1: Process all the frames of the video
 
 Parameters:
   - InteractiveWallNKinect.exe: Main application
-  - [videoname]: Any compatible video with OpenCV.
+  - [videoname]: Path or filename of the video (compatible with OpenCV) with its extension
 
 MODE 2: Process a range of frames in the video. Be sure you input a properly range.
 
@@ -30,6 +30,6 @@ MODE 2: Process a range of frames in the video. Be sure you input a properly ran
 
 Parameters:
   - InteractiveWallNKinect.exe: Main application
-  - [videoname]: Path or filename of the video with its extension
+  - [videoname]: Path or filename of the video (compatible with OpenCV) with its extension
   - [initialframe]: Start frame of the range that should be processed in the video
   - [lastframe]: End frame of the range that should be processed in the video
