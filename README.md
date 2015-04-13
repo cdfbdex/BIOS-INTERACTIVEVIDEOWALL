@@ -26,7 +26,7 @@ Parameters:
 
 MODE 2: Process a range of frames in the video. Be sure you input a properly range.
 
-..\bin\Release\ InteractiveWallNKinect.exe [videoname] [initialframe] [lastframe]
+..\bin\Release\InteractiveWallNKinect.exe [videoname] [initialframe] [lastframe]
 
 Parameters:
   - InteractiveWallNKinect.exe: Main application
