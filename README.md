@@ -2,6 +2,7 @@
 This is a Human Computer Interface using few Kinects to play a video according to person's position in one direction.
 
 USER GUIDE
+
 1. Execute CMake in main folder to generate the project of Visual Studio 2013.
 2. Open Visual Studio project and compile it in Release mode.
 3. Open \bin\Release folder and verify that .exe has been created properly.
@@ -9,8 +10,10 @@ USER GUIDE
 5. Copy the selected video in the folder \bin\Release.
 
 EXECUTING PROGRAM
+
 Open a command window in the folder \bin\Release. And write the corresponding
-command depending on the mode you want.
+command depending on the selected mode:
+
 MODE 1: Process all the frames of the video
 ..\bin\Release\ InteractiveWallNKinect.exe VideoName.avi
 Parameters:
