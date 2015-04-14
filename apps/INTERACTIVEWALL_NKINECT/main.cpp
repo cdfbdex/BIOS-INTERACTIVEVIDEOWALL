@@ -6,7 +6,7 @@
 */
 
 // Constants definition
-#define	MAX_POSSIBLE_SENSORS	4
+#define	MAX_POSSIBLE_SENSORS	10
 
 
 // Definition of necessary libraries
@@ -34,7 +34,7 @@ void TrackObjects(int, void*);
 // Global variables definition
 int morph_elem = 0;					// Type (or shape) of structuring element
 int morph_size = 0;					// Same as kernel_size. Size of structuring element
-int morph_operator = 0;				// Define morphological operation between structuring element and image
+int morph_operator = 2;				// Define morphological operation between structuring element and image
 int threshold_value = 5;			// Lower threshold limit for binarization
 int threshold_value2 = 16;			// Upper threshold limit for binarization
 
@@ -57,8 +57,8 @@ CvTracks tracks;					// Structure to extract characteristics of the blobs
 float const WINDOW_WIDTH = 640.0;
 float const WINDOW_HEIGHT = 480.0;
 
-// Number of devices that are connected
-int detectedDevices;	
+int ScaleHeight = 2;				// Resize images decreasing height of the image in ScaleHeight factor
+int detectedDevices;				// Number of devices that are connected
 
 float P0 = 0.0;						// Centroid of biggest found Blob
 
@@ -146,7 +146,7 @@ void TrackObjects(int, void*)
 
 	// Apply the specified morphological operation to finalBinaryImage matrix, and replace it
 	// operation: 0=MORPH_ERODE; 1=MORPH_DILATE; 2=MORPH_OPEN; 3=MORPH_CLOSE; 4=MORPH_GRADIENT; 5=MORPH_TOPHAT; 6=MORPH_BLACKHAT;
-	int operation = morph_operator + 2;
+	int operation = morph_operator;		/*TODO: VERIFICAR CAMBIOS DE OPERACION DE 0..6*/
 	morphologyEx(finalBinaryImage, finalBinaryImage, operation, element);
 
 	//Converts finalBinaryImage to 3-Channel image
@@ -231,8 +231,8 @@ void TrackObjects(int, void*)
 	// Draw a rectangle with the next constructor: rectangle(Mat& img, Point pt1, Point pt2, const Scalar& color, int thickness=1, int lineType=8, int shift=0)
 	// img: Image to draw the rectangle - pt1: Origin vertex - pt2: Vertex opposite to pt1
 	int const rectangleThickness = 3;
-	rectangle(finalDepthImage, Point(0, 0), Point(WINDOW_WIDTH - rectangleThickness, WINDOW_HEIGHT/detectedDevices - rectangleThickness), Scalar(0, 0, 255)/*BRG*/, rectangleThickness);
-	rectangle(finalBinaryImage, Point(0, 0), Point(WINDOW_WIDTH - rectangleThickness, WINDOW_HEIGHT/detectedDevices - rectangleThickness), Scalar(0, 255, 0), rectangleThickness);
+	rectangle(finalDepthImage, Point(0, 0), Point(WINDOW_WIDTH*detectedDevices - rectangleThickness, WINDOW_HEIGHT/ScaleHeight - rectangleThickness), Scalar(0, 0, 255)/*BRG*/, rectangleThickness);
+	rectangle(finalBinaryImage, Point(0, 0), Point(WINDOW_WIDTH*detectedDevices - rectangleThickness, WINDOW_HEIGHT/ScaleHeight - rectangleThickness), Scalar(0, 255, 0), rectangleThickness);
 
 	// Design of video containers
 	Size sizeLeft = finalDepthImage.size();													// Size of acquired gray-color image
@@ -314,7 +314,7 @@ int main(int argc, char** argv)
 		rc = device[i].open(deviceURI[i]);							// Connect to physical hardware device
 		if (rc != STATUS_OK)
 		{
-			cout << "SimpleViewer device " << i+1 << ": Device open failed:" << OpenNI::getExtendedError() << endl;
+			cout << "SimpleViewer device " << i + 1 << ": Device open failed:" << OpenNI::getExtendedError() << endl;
 			OpenNI::shutdown();										// Shutdown drivers and clean up properly
 			return EXIT_FAILURE;
 		}
@@ -443,9 +443,9 @@ int main(int argc, char** argv)
 
 	// Constants defined for trackbar creation
 	int const max_pixel_value = 255;	// Max value in a pixel
-	int const max_operator = 4;			// Max value for operation between SE and image
+	int const max_operator = 6;			// Max value for operation between SE and image
 	int const max_elem = 2;				// Max value for shape of SE
-	int const max_kernel_size = 21;		// Max value for size of SE
+	int const max_kernel_size = 20;		// Max value for size of SE
 	int const max_value_size = 100;		// Max value for filtering size of blobs in the image
 
 	// Definition of trackbar labels
@@ -474,13 +474,12 @@ int main(int argc, char** argv)
 	createTrackbar(trackbar_ShapeSE, main_window_name, &morph_elem, max_elem, TrackObjects);
 	// Trackbar to choose kernel size
 	createTrackbar(trackbar_SizeSE, main_window_name, &morph_size, max_kernel_size, TrackObjects);
-
-
+	
 
 	// Images used in the TrackObjects function
-	bwImage = cvCreateImage(cvSize(WINDOW_WIDTH, WINDOW_HEIGHT/detectedDevices), IPL_DEPTH_8U, 3);
-	labelImg = cvCreateImage(cvSize(WINDOW_WIDTH, WINDOW_HEIGHT/detectedDevices), IPL_DEPTH_LABEL, 1);
-	bwImage1C = cvCreateImage(cvSize(WINDOW_WIDTH, WINDOW_HEIGHT/detectedDevices), IPL_DEPTH_8U, 1);
+	bwImage = cvCreateImage(cvSize(WINDOW_WIDTH*detectedDevices, WINDOW_HEIGHT/ScaleHeight), IPL_DEPTH_8U, 3);
+	labelImg = cvCreateImage(cvSize(WINDOW_WIDTH*detectedDevices, WINDOW_HEIGHT/ScaleHeight), IPL_DEPTH_LABEL, 1);
+	bwImage1C = cvCreateImage(cvSize(WINDOW_WIDTH*detectedDevices, WINDOW_HEIGHT/ScaleHeight), IPL_DEPTH_8U, 1);
 
 
 	// Variables to allocate frames of video streams
@@ -523,7 +522,6 @@ int main(int argc, char** argv)
 			{
 				captured_allkinects = captured_allkinects & kinectReaded[i];
 			}
-
 		}
 		
 		Mat depthImage_resized[MAX_POSSIBLE_SENSORS];
@@ -538,7 +536,7 @@ int main(int argc, char** argv)
 				cvtColor(depthImage_gray[i], depthImage[i], CV_GRAY2BGR);						//Create 3-Channel image from gray image
 				//imshow("Depth Image", depthImage_gray);
 			}
-			resize(depthImage_gray[i], depthImage_resized[i], Size(WINDOW_WIDTH / detectedDevices, WINDOW_HEIGHT / detectedDevices));
+			resize(depthImage_gray[i], depthImage_resized[i], Size(WINDOW_WIDTH, WINDOW_HEIGHT / ScaleHeight));		// Draw and image with the WIDTH*detectedDevices and reduce its height
 		}
 		
 
@@ -553,6 +551,10 @@ int main(int argc, char** argv)
 		// Convert images in necessary color scales
 		cvtColor(ImTotal, finalDepthImage, CV_GRAY2BGR);
 		cvtColor(finalDepthImage, finalDepthImage_gray, CV_RGB2GRAY);
+
+		
+		//cout << finalDepthImage.size();
+		//system("pause");
 
 
 		// Call the function to initialize
