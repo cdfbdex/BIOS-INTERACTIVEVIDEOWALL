@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<UmbralMinimo>66</UmbralMinimo>
+<UmbralMaximo>105</UmbralMaximo>
+<MinArea>1</MinArea>
+<MaxArea>19</MaxArea>
+<TipoOperacionMorfologica>2</TipoOperacionMorfologica>
+<FormaElemEstructurante>0</FormaElemEstructurante>
+<TamanoElemEstructurante>0</TamanoElemEstructurante>
+<DistanceCroppingUnderneath>97</DistanceCroppingUnderneath>
+</opencv_storage>
