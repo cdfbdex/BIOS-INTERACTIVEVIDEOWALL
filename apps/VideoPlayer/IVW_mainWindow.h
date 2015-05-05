@@ -2,6 +2,7 @@
 #define IVW_MAINWINDOW_H
 
 
+#include "IVW_settingsWindow.h"
 
 #include <QMainWindow>
 #include <phonon/audiooutput.h>
@@ -66,6 +67,9 @@ private slots:
     void videoPlayer_tick(qint64 time);
     void videoPlayer_totalTimeChanged(qint64 time);
     void videoPlayer_finished();
+
+	void toolButton_Settings_Clicked();
+
 
 	// SEND INFORMATION TO INTERACTIVE APPLICATION
 	void on_checkBox_AllVideo_stateChanged(int state);

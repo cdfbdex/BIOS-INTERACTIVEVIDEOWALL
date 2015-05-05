@@ -17,6 +17,7 @@
 #include <OpenNI.h>
 
 #include <iostream>
+#include <fstream>
 #include <vector>
 
 
@@ -33,8 +34,8 @@ void TrackObjects(int, void*);
 
 // Global variables definition
 int morph_elem = 0;					// Type (or shape) of structuring element
-int morph_size = 0;					// Same as kernel_size. Size of structuring element
-int morph_operator = 2;				// Define morphological operation between structuring element and image
+int morph_size = 3;					// Same as kernel_size. Size of structuring element
+int morph_operator = 1;				// Define morphological operation between structuring element and image
 
 int threshold_value = 55;			// Lower threshold limit for binarization
 int threshold_value2 = 110;			// Upper threshold limit for binarization
@@ -50,7 +51,6 @@ Mat depthImage_gray[MAX_POSSIBLE_SENSORS];			// 1-Channel gotten image from dept
 Mat finalBinaryImage;								// Final processed image
 
 
-
 IplImage* bwImage;					// Black-White 3-channel image 
 IplImage* bwImage1C;				// Black-White 1-channel image for blob labeling
 IplImage* labelImg;					// Image with labeled blobs
@@ -59,15 +59,15 @@ CvBlobs blobs;						// Structure to identify blobs in binary image
 CvTracks tracks;					// Structure to extract characteristics of the blobs
 
 // Define resolution of displayed windows
-float const WINDOW_WIDTH = 640.0;
-float const WINDOW_HEIGHT = 480.0;
+int DepthImageWidth;
+int DepthImageHeight;
 
 int ScaleHeight;					// Resize images decreasing height of the image in ScaleHeight factor
 int detectedDevices;				// Number of devices that are connected
 
 float P0 = 0.0;						// Centroid of biggest found Blob
 
-char* main_window_name = "Control Panel (Press 'q' to exit)";
+char* main_window_name = "Control Panel (Exit: ESC)";
 char* video_window_name = "Video";
 
 
@@ -174,7 +174,7 @@ void TrackObjects(int, void*)
 	unsigned int result = cvLabel(bwImage1C, labelImg, blobs);
 
 	// Filter blobs whose area is not in the range defined in the trackbar. The area computed as the percentage of the container window
-	cvFilterByArea(blobs, int((float(MinSize) / 100.0)*(WINDOW_WIDTH*detectedDevices * WINDOW_HEIGHT / ScaleHeight)), int((float(MaxSize) / 100.0)*(WINDOW_WIDTH*detectedDevices * WINDOW_HEIGHT/ScaleHeight)));
+	cvFilterByArea(blobs, int((float(MinSize) / 100.0)*(DepthImageWidth*detectedDevices * DepthImageHeight / ScaleHeight)), int((float(MaxSize) / 100.0)*(DepthImageWidth*detectedDevices * DepthImageHeight/ScaleHeight)));
 
 	// Updates list of tracks based on current blobs, converting the detected blobs into structures with
 	// info related to lifetime and position. Tracks assure that one blob has the same label while it is
@@ -216,7 +216,7 @@ void TrackObjects(int, void*)
 			{
 				// Get centroid coordinates of the blob and use it to select the frame of the showing video
 				CvPoint2D64f XY = (*it).second->centroid;
-				P0 = XY.x;
+				P0 = (float)XY.x;
 				cout << "Largest Blob " << largestBlobLabel << " = ( " << XY.x << " , " << XY.y << " )" << endl;
 			}
 		}
@@ -236,8 +236,8 @@ void TrackObjects(int, void*)
 	// Draw a rectangle with the next constructor: rectangle(Mat& img, Point pt1, Point pt2, const Scalar& color, int thickness=1, int lineType=8, int shift=0)
 	// img: Image to draw the rectangle - pt1: Origin vertex - pt2: Vertex opposite to pt1
 	int const rectangleThickness = 3;
-	rectangle(finalDepthImage, Point(0, 0), Point(WINDOW_WIDTH*detectedDevices - rectangleThickness, WINDOW_HEIGHT/ScaleHeight - rectangleThickness), Scalar(0, 0, 255)/*BRG*/, rectangleThickness);
-	rectangle(finalBinaryImage, Point(0, 0), Point(WINDOW_WIDTH*detectedDevices - rectangleThickness, WINDOW_HEIGHT/ScaleHeight - rectangleThickness), Scalar(0, 255, 0), rectangleThickness);
+	rectangle(finalDepthImage, Point(0, 0), Point(int(DepthImageWidth*detectedDevices - rectangleThickness), int(DepthImageHeight/ScaleHeight - rectangleThickness)), Scalar(0, 0, 255)/*BRG*/, rectangleThickness);
+	rectangle(finalBinaryImage, Point(0, 0), Point(int(DepthImageWidth*detectedDevices - rectangleThickness),int(DepthImageHeight/ScaleHeight - rectangleThickness)), Scalar(0, 255, 0), rectangleThickness);
 
 	// Design of video containers
 	Size sizeLeft = finalDepthImage.size();													// Size of acquired gray-color image
@@ -251,6 +251,15 @@ void TrackObjects(int, void*)
 	Mat rightImage(imageContainer, Rect(sizeLeft.width, 0, sizeRight.width, sizeRight.height));			// Size of right container
 	finalBinaryImage.copyTo(rightImage);																// Assing image to right container
 
+	for (int i = 0; i < detectedDevices; i++)
+	{
+		// Write label in each image
+		stringstream textT;
+		textT << i+1;
+		string text = textT.str();
+		putText(imageContainer, text, Point(10+(i*DepthImageWidth),int(0.1*ScaleHeight*sizeLeft.height)), FONT_HERSHEY_SIMPLEX, 2, Scalar(0,0,255),2);
+	}
+
 	imshow(main_window_name, imageContainer);
 }
 
@@ -261,6 +270,7 @@ int main(int argc, char** argv)
 	if (argc != 3 && argc != 5)
 	{
 		cout << "Invalid number of inputs." << endl;
+		system("pause");
 		return EXIT_FAILURE;
 	}
 	
@@ -280,6 +290,7 @@ int main(int argc, char** argv)
 	if (rc != STATUS_OK)
 	{
 		cout << "Driver initialization failed:" << OpenNI::getExtendedError() << endl;
+		system("pause");
 		return EXIT_FAILURE;
 	}
 
@@ -294,11 +305,14 @@ int main(int argc, char** argv)
 	if (detectedDevices > MAX_POSSIBLE_SENSORS)
 	{
 		cout << "Cannot detect more than " << MAX_POSSIBLE_SENSORS << " devices." << endl;
+		system("pause");
+		OpenNI::shutdown();
 		return EXIT_FAILURE;
 	}
 	if (detectedDevices < 1)
 	{
 		cout << "Not connected devices." << endl;
+		system("pause");
 		OpenNI::shutdown();
 		return EXIT_FAILURE;
 	}
@@ -308,15 +322,72 @@ int main(int argc, char** argv)
 	}
 
 
+	//Detect URI of connected devices
+	for (int i=0;i<detectedDevices;i++)
+	{
+		deviceURI[i] = deviceInfoList[i].getUri();
+		//cout << deviceURI[i] << endl;
+	}
+
+
+	//// Change order of devices.
+	// File reading for kinect order
+	ifstream inFileKinect;
+	
+	inFileKinect.open("KinectOrder.txt",ios::in);
+	
+	int kinect1, kinect2;
+	if (inFileKinect.is_open())
+	{
+		cout << "---Kinect configuration---" << endl;
+		while (!inFileKinect.eof())
+		{
+			inFileKinect >> kinect1 >> kinect2;
+
+			if(kinect1==kinect2)
+			{
+				continue;
+			}
+			else if(kinect1<1 || kinect1>detectedDevices || 
+					kinect2<1 || kinect2>detectedDevices)
+			{
+				cout << "Invalid data in settings file. ";
+				cout << "Input values between 1 and " << detectedDevices << "."<< endl;
+				system("pause");
+				OpenNI::shutdown();
+				return EXIT_FAILURE;
+			}
+			else
+			{
+				const char* temp = deviceURI[kinect2-1];
+				deviceURI[kinect2-1] = deviceURI[kinect1-1];
+				deviceURI[kinect1-1] = temp;
+				cout << "Kinect's image " << kinect1 << " and " << kinect2 << " were swapped correctly." << endl;
+			}
+			kinect1 = 0;
+			kinect2 = 0;
+		}
+		inFileKinect.close();
+	}
+
+	//// PRUEBA MODIFICACIÓN URI
+	//cout << endl;
+	//for (int i=0;i<detectedDevices;i++)
+	//{
+	//	cout << deviceURI[i] << endl;
+	//}
+	//system("pause");
+	//return 0;
+
+
 	// Initialize and set up each one of the connected sensors
 	for (int i = 0; i < detectedDevices; i++)
 	{
-		deviceURI[i] = deviceInfoList[i].getUri();
-
 		rc = device[i].open(deviceURI[i]);							// Connect to physical hardware device
 		if (rc != STATUS_OK)
 		{
 			cout << "SimpleViewer device " << i + 1 << ": Device open failed:" << OpenNI::getExtendedError() << endl;
+			system("pause");
 			OpenNI::shutdown();										// Shutdown drivers and clean up properly
 			return EXIT_FAILURE;
 		}
@@ -360,6 +431,7 @@ int main(int argc, char** argv)
 		if (!depth_stream[i].isValid() || !color_stream[i].isValid())
 		{
 			cout << "SimpleViewer device " << i + 1 << ": No valid streams." << endl;
+			system("pause");
 			OpenNI::shutdown();									// Shutdown drivers and clean up properly
 			return EXIT_FAILURE;
 		}
@@ -373,18 +445,6 @@ int main(int argc, char** argv)
 		//streams[i].push_back(&color_stream[i]);
 		videoMode[i] = depth_stream[i].getVideoMode();
 
-
-		// Registration process consists in superimpose depth and RGB images, originally taken from different angles
-		// If this feature is enabled, it will be an "shadows" and "holes" in the depthmap, and an to one side of Depthmap will not be shown
-		// ImageRegistrationMode: IMAGE_REGISTRATION_OFF = 0 - IMAGE_REGISTRATION_DEPTH_TO_COLOR = 1)
-		//if (device[i].isImageRegistrationModeSupported(IMAGE_REGISTRATION_DEPTH_TO_COLOR))
-		//{
-		//	device[i].setImageRegistrationMode(IMAGE_REGISTRATION_DEPTH_TO_COLOR);
-		//}
-		//else
-		//{
-		//	cout << "Device " << i + 1 << " does not support image registration" << endl;
-		//}
 	}
 	cout << endl;
 
@@ -395,9 +455,13 @@ int main(int argc, char** argv)
 			videoMode[i].getResolutionY() != videoMode[i-1].getResolutionY())
 		{
 			cout << "Streams of all sensors must have the same resolution." << endl;
+			system("pause");
 			return EXIT_FAILURE;
 		}
 	}
+
+	DepthImageWidth =  videoMode[0].getResolutionX();
+	DepthImageHeight = videoMode[0].getResolutionY();
 	
 	// Load selected video
 	char* loadVideoPath = argv[2];
@@ -413,6 +477,7 @@ int main(int argc, char** argv)
 	if (!cap.isOpened())
 	{
 		cout << "Could Not Load Video: " << argv[2] << endl;
+		system("pause");
 		return EXIT_FAILURE;
 	}
 	else
@@ -421,7 +486,7 @@ int main(int argc, char** argv)
 		if (argc == 5)										// If there are four arguments, calculate frame between specified range
 		{
 			ScaleHeight = atoi(argv[1]);
-			numberOfFrames = cap.get(CV_CAP_PROP_FRAME_COUNT);
+			numberOfFrames = (int)cap.get(CV_CAP_PROP_FRAME_COUNT);
 			initialFrame = atoi(argv[3]);
 			finalFrame = atoi(argv[4]);
 
@@ -430,6 +495,7 @@ int main(int argc, char** argv)
 				finalFrame > numberOfFrames || finalFrame < 0)
 			{
 				cout << "Invalid range of frames. Max possible value is " << numberOfFrames << " frames." << endl;
+				system("pause");
 				return EXIT_FAILURE;
 			}
 			numberOfFrames = finalFrame - initialFrame + 1;
@@ -438,7 +504,7 @@ int main(int argc, char** argv)
 		{
 			ScaleHeight = atoi(argv[1]);
 			initialFrame = 0;
-			numberOfFrames = cap.get(CV_CAP_PROP_FRAME_COUNT);
+			numberOfFrames = (int)cap.get(CV_CAP_PROP_FRAME_COUNT);
 			finalFrame = numberOfFrames - 1;
 		}
 
@@ -461,7 +527,7 @@ int main(int argc, char** argv)
 	int const max_elem = 2;				// Max value for shape of SE
 	int const max_kernel_size = 20;		// Max value for size of SE
 	int const max_value_size = 100;		// Max value for filtering size of blobs in the image
-	int const max_HeightCropping = WINDOW_HEIGHT/ScaleHeight;
+	int const max_HeightCropping = DepthImageHeight/ScaleHeight;		// Max value for filter floor image
 
 	// Definition of trackbar labels
 	char* trackbar_MinDistValue = "Min. Dist";			// Labels for depth image binarization thresholds
@@ -477,34 +543,19 @@ int main(int argc, char** argv)
 	namedWindow(main_window_name, CV_WINDOW_NORMAL);
 	namedWindow(video_window_name, CV_WINDOW_NORMAL);
 	startWindowThread();
-
-
-	FileStorage FSArchivo("Configuracion.xml", FileStorage::READ);
-	if (FSArchivo.isOpened())
-	{
-		threshold_value = (int)FSArchivo["UmbralMinimo"];
-		threshold_value2 = (int)FSArchivo["UmbralMaximo"];
-		MinSize = (int)FSArchivo["MinArea"];
-		MaxSize = (int)FSArchivo["MaxArea"];
-		morph_operator = (int)FSArchivo["TipoOperacionMorfologica"];
-		morph_elem = (int)FSArchivo["FormaElemEstructurante"];
-		morph_size = (int)FSArchivo["TamanoElemEstructurante"];
-		DistanceCroppingUnderneath = (int)FSArchivo["DistanceCroppingUnderneath"];
-		FSArchivo.release();
-	}
 	
+	// File reading for settings values
+	ifstream inFile;
+	inFile.open("Settings.txt",ios::in);
+	if (inFile.is_open())
+	{
+		inFile >> threshold_value >> threshold_value2 >> MinSize >> MaxSize 
+			>> morph_operator >> morph_elem >> morph_size >> DistanceCroppingUnderneath;
 
+		inFile.close();
+	}
 
-
-	//cout << threshold_value << endl;cout << threshold_value2 << endl;
-	//cout << MinSize << endl;
-	//cout << MaxSize << endl;
-	//cout << morph_operator << endl;
-	//cout << morph_size << endl;
-	//cout << DistanceCroppingUnderneath << endl;
-
-	//system("pause");
-
+	
 	// Trackbar Creation
 	// Trackbar to modify Binarization Thresholds
 	createTrackbar(trackbar_MinDistValue, main_window_name, &threshold_value, max_pixel_value, TrackObjects);
@@ -523,9 +574,9 @@ int main(int argc, char** argv)
 
 
 	// Images used in the TrackObjects function
-	bwImage = cvCreateImage(cvSize(WINDOW_WIDTH*detectedDevices, WINDOW_HEIGHT/ScaleHeight), IPL_DEPTH_8U, 3);
-	labelImg = cvCreateImage(cvSize(WINDOW_WIDTH*detectedDevices, WINDOW_HEIGHT/ScaleHeight), IPL_DEPTH_LABEL, 1);
-	bwImage1C = cvCreateImage(cvSize(WINDOW_WIDTH*detectedDevices, WINDOW_HEIGHT/ScaleHeight), IPL_DEPTH_8U, 1);
+	bwImage = cvCreateImage(cvSize(DepthImageWidth*detectedDevices, DepthImageHeight/ScaleHeight), IPL_DEPTH_8U, 3);
+	labelImg = cvCreateImage(cvSize(DepthImageWidth*detectedDevices, DepthImageHeight/ScaleHeight), IPL_DEPTH_LABEL, 1);
+	bwImage1C = cvCreateImage(cvSize(DepthImageWidth*detectedDevices, DepthImageHeight/ScaleHeight), IPL_DEPTH_8U, 1);
 
 
 	// Variables to allocate frames of video streams
@@ -552,6 +603,7 @@ int main(int argc, char** argv)
 			if (rc != STATUS_OK)
 			{
 				cout << ("Wait failed\n");
+				system("pause");
 				return EXIT_FAILURE;
 			}
 
@@ -580,9 +632,10 @@ int main(int argc, char** argv)
 				depthImage_gray[i] = getDepthImage(depth_frame[i]);								//Get gray image from depth sensor: Resolution 16 bits
 				depthImage_gray[i] = getDepthDrawableImage(depthImage_gray[i]);					//Get gray image from depth sensor: Resolution 8 bits
 				cvtColor(depthImage_gray[i], depthImage[i], CV_GRAY2BGR);						//Create 3-Channel image from gray image
-				//imshow("Depth Image", depthImage_gray);
+				//imshow("Depth Image", depthImage[i]);
 			}
-			resize(depthImage_gray[i], depthImage_resized[i], Size(WINDOW_WIDTH, WINDOW_HEIGHT / ScaleHeight));		// Draw and image with the WIDTH*detectedDevices and reduce its height
+			resize(depthImage_gray[i], depthImage_resized[i], Size(DepthImageWidth, DepthImageHeight / ScaleHeight));		// Draw and image with the WIDTH*detectedDevices and reduce its height
+			//resize(depthImage[i], depthImage_resized[i], Size(DepthImageWidth, DepthImageHeight / ScaleHeight));		// Draw and image with the WIDTH*detectedDevices and reduce its height
 		}
 		
 
@@ -590,13 +643,15 @@ int main(int argc, char** argv)
 		Mat ImTotal(depthImage_resized[0].rows, depthImage_resized[0].cols*detectedDevices, CV_8UC1);
 		for (int i = 0; i < detectedDevices; i++)
 		{
+			// Join images
 			Mat joinImages(ImTotal, Rect(i*depthImage_resized[0].cols, 0, depthImage_resized[0].cols, depthImage_resized[0].rows));
 			depthImage_resized[i].copyTo(joinImages);
+			//imshow("Depth Image", joinImages);
 		}
 		
 
 		// Crop floor area
-		Mat mask(ImTotal, Rect(0,(WINDOW_HEIGHT / ScaleHeight) - DistanceCroppingUnderneath, ImTotal.cols, DistanceCroppingUnderneath));				// Size of floor filter
+		Mat mask(ImTotal, Rect(0,(DepthImageHeight / ScaleHeight) - DistanceCroppingUnderneath, ImTotal.cols, DistanceCroppingUnderneath));				// Size of floor filter
 		if (ImTotal.type() == CV_8UC1)
 		{
 			mask.setTo(Scalar(255));
@@ -605,6 +660,7 @@ int main(int argc, char** argv)
 		{
 			mask.setTo(Scalar(255, 255, 255));
 		}
+		
 		
 			
 		// Convert images in necessary color scales
@@ -621,7 +677,7 @@ int main(int argc, char** argv)
 
 		// Show the respective frame of the video, based on the centroid of the biggest founded blob 
 		cout << "P0 = " << P0 << endl;
-		int calculatedFrame = int((P0 / (WINDOW_WIDTH*detectedDevices))*(numberOfFrames))+initialFrame;
+		int calculatedFrame = int((P0 / (DepthImageWidth*detectedDevices))*(numberOfFrames))+initialFrame;
 		cout << "Frame = " << calculatedFrame << endl;
 
 		// Show calculatedFrame
@@ -632,7 +688,7 @@ int main(int argc, char** argv)
 
 		// Exit of the program
 		int key = waitKey(1);
-		if (key == 'q' || key == 'Q')
+		if (key == 27)
 		{
 			//exit = true;						// Enable exit flag to close application
 			cout << "Press Ctrl+C to exit..." << endl;
@@ -641,23 +697,18 @@ int main(int argc, char** argv)
 	}
 
 
-
-	FileStorage NewConfigurationFile("Configuracion.xml", FileStorage::WRITE);
-
-	if (NewConfigurationFile.isOpened())
-	{
-		NewConfigurationFile << "UmbralMinimo" << threshold_value;
-		NewConfigurationFile << "UmbralMaximo" << threshold_value2;
-		NewConfigurationFile << "MinArea" << MinSize;
-		NewConfigurationFile << "MaxArea" << MaxSize;
-		NewConfigurationFile << "TipoOperacionMorfologica" << morph_operator;
-		NewConfigurationFile << "FormaElemEstructurante" << morph_elem;
-		NewConfigurationFile << "TamanoElemEstructurante" << morph_size;
-		NewConfigurationFile << "DistanceCroppingUnderneath" << DistanceCroppingUnderneath;
-		NewConfigurationFile.release();
-	}
+	// File writing for settings values
+	ofstream outFile;
 	
+	outFile.open("Settings.txt",ios::out);
+	if (outFile.is_open())
+	{
+		outFile << (int)threshold_value << '\n' << (int)threshold_value2 << '\n' 
+			<< (int)MinSize << '\n' << (int)MaxSize << '\n' << (int)morph_operator << '\n' 
+			<< (int)morph_elem << '\n' << (int)morph_size << '\n' << (int)DistanceCroppingUnderneath;
 
+		outFile.close();
+	}
 
 
 	destroyAllWindows();				// Close cvWindows
@@ -666,7 +717,6 @@ int main(int argc, char** argv)
 	cvReleaseImage(&bwImage);
 	cvReleaseImage(&labelImg);
 	cvReleaseImage(&bwImage1C);
-
 
 	color_stream->stop();
 	depth_stream->stop();

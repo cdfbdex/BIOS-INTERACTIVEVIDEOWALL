@@ -1,5 +1,9 @@
 <RCC>
   <qresource prefix="/">
+    <file>Images/wrench73.png</file>
+    <file>Images/logo-bios.jpg</file>
+    <file>Images/VideoWall_icon.ico</file>
+    <file>Images/videowall_icon_2.ico</file>
     <file>Images/sendVideo.png</file>
     <file>Images/application-exit.png</file>
     <file>Images/delete.png</file>

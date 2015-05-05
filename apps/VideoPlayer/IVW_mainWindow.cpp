@@ -97,13 +97,18 @@ void IVW_mainWindow::ConnectSlots()
     QObject::connect(this->videoPlayer_->mediaObject(), SIGNAL(totalTimeChanged(qint64)), this, SLOT(videoPlayer_totalTimeChanged(qint64)));
     QObject::connect(this->videoPlayer_, SIGNAL(finished()), this, SLOT(videoPlayer_finished()));    
 
+	// CONFIGURE KINECTS OF INTERACTIVE WALL
+	QObject::connect(ui->toolButton_Settings, SIGNAL(clicked()), this, SLOT(toolButton_Settings_Clicked()));
+
 	// SEND DATA TO VIDEO INTERACTIVE WALL
 	QObject::connect(ui->toolButton_SendToInteractiveWall, SIGNAL(clicked()), this, SLOT(toolButton_SendToInteractiveWall_Clicked()));
 	QObject::connect(ui->pushButton_InitialRange, SIGNAL(clicked()), this, SLOT(pushButton_InitialRange_Clicked()));
 	QObject::connect(ui->pushButton_EndRange, SIGNAL(clicked()), this, SLOT(pushButton_EndRange_Clicked()));
 
 	// SLOT TO HANDLE PARALLEL PROCESS
-	QObject::connect(this->process, SIGNAL(finished(int, QProcess::ExitStatus)), this, SLOT(On_FinishedProcess(int, QProcess::ExitStatus)));
+	QObject::connect(this->process, SIGNAL(finished(int, QProcess::ExitSttus)), this, SLOT(On_FinishedProcess(int, QProcess::ExitStatus)));
+
+
 }
 
 
@@ -675,9 +680,19 @@ void IVW_mainWindow::ShowCurrentPlayingInTaskBar(const Phonon::MediaSource& sour
 // Button About
 void IVW_mainWindow::toolButton_About_Clicked()
 {
-    QMessageBox::information(this, tr("About Qt Media Player"),
-                                   tr("The Qt Media Player is very simple media player."
-                                      "This player uses Qt Phonon multimedia library."));
+
+	QMessageBox msgBox;
+	msgBox.setWindowTitle("Credits (Spanish)");
+	msgBox.setText("BIOS - INTERACTIVE VIDEOWALL");
+	msgBox.setInformativeText("Proyecto de Regalías:\n"
+		"Convenio Especial de Cooperación 08112013-0621\n"
+		"Celebrado entre el departamento de Caldas y el\n"
+		"Centro de Bioinformática y Biología Computacional.\n\n"
+		"Agradecimientos al  Ministerio de Tecnologías de\n"
+		"la Información  y las Comunicaciones ( MINTIC ).\n\n"
+		"Este proyecto está soportado en la biblioteca Qt 4.8.\n\n\n"
+		"ÁREA DE INNOVACIÓN TECNOLÓGICA - CBBC\n");
+	msgBox.exec();
 }
 
 // If an item in the list has been double clicked
@@ -833,6 +848,15 @@ void IVW_mainWindow::on_checkBox_AllVideo_stateChanged(int state)
 		ui->pushButton_EndRange->setEnabled(true);
 	}	
 }
+
+// Settings 
+void IVW_mainWindow::toolButton_Settings_Clicked()
+{
+	IVW_settingsWindow *DialogWindow = new IVW_settingsWindow;
+	DialogWindow->show();
+}
+
+
 
 // Main function to run the Interactive Wall application
 void IVW_mainWindow::toolButton_SendToInteractiveWall_Clicked()

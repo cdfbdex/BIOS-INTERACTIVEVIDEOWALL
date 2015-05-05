@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'IVW_mainWindow.ui'
 **
-** Created: Mon 20. Apr 17:55:22 2015
+** Created: Thu 30. Apr 10:25:10 2015
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -39,6 +39,7 @@ class Ui_IVW_mainWindow
 public:
     QWidget *centralWidget;
     QGridLayout *gridLayout_4;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_2;
     QToolButton *toolButton_Open;
     QToolButton *toolButton_RemoveList;
@@ -55,11 +56,10 @@ public:
     QSpacerItem *horizontalSpacer_3;
     QToolButton *toolButton_About;
     QToolButton *toolButton_CloseApp;
-    QHBoxLayout *horizontalLayout_5;
-    QFrame *line;
-    QVBoxLayout *verticalLayout;
     QTableWidget *tableWidget;
     QSpacerItem *horizontalSpacer_5;
+    QHBoxLayout *horizontalLayout_5;
+    QFrame *line;
     QGridLayout *gridLayout_3;
     QSpacerItem *horizontalSpacer_4;
     QLCDNumber *lcdNumber;
@@ -69,9 +69,12 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QLabel *label_SendToWall;
     QSpacerItem *horizontalSpacer_6;
+    QHBoxLayout *horizontalLayout_3;
+    QSpacerItem *horizontalSpacer;
     QHBoxLayout *horizontalLayout_6;
     QToolButton *toolButton_SendToInteractiveWall;
     QSpacerItem *horizontalSpacer_7;
+    QToolButton *toolButton_Settings;
     QGridLayout *gridLayout_2;
     QCheckBox *checkBox_AllVideo;
     QComboBox *comboBox_ScaleHeight;
@@ -83,8 +86,6 @@ public:
     QLabel *label_InitialRange;
     QPushButton *pushButton_InitialRange;
     QPushButton *pushButton_EndRange;
-    QHBoxLayout *horizontalLayout_3;
-    QSpacerItem *horizontalSpacer;
     QStatusBar *statusBar;
 
     void setupUi(QMainWindow *IVW_mainWindow)
@@ -98,6 +99,10 @@ public:
         gridLayout_4->setSpacing(6);
         gridLayout_4->setContentsMargins(11, 11, 11, 11);
         gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setSpacing(6);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(-1, -1, -1, 1);
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
@@ -234,25 +239,8 @@ public:
         horizontalLayout_2->addWidget(toolButton_CloseApp);
 
 
-        gridLayout_4->addLayout(horizontalLayout_2, 6, 0, 1, 1);
+        verticalLayout->addLayout(horizontalLayout_2);
 
-        horizontalLayout_5 = new QHBoxLayout();
-        horizontalLayout_5->setSpacing(6);
-        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
-        line = new QFrame(centralWidget);
-        line->setObjectName(QString::fromUtf8("line"));
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
-
-        horizontalLayout_5->addWidget(line);
-
-
-        gridLayout_4->addLayout(horizontalLayout_5, 7, 0, 1, 1);
-
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setSpacing(6);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(-1, -1, -1, 1);
         tableWidget = new QTableWidget(centralWidget);
         if (tableWidget->columnCount() < 1)
             tableWidget->setColumnCount(1);
@@ -274,6 +262,19 @@ public:
 
 
         gridLayout_4->addLayout(verticalLayout, 0, 0, 1, 1);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setSpacing(6);
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        line = new QFrame(centralWidget);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        horizontalLayout_5->addWidget(line);
+
+
+        gridLayout_4->addLayout(horizontalLayout_5, 7, 0, 1, 1);
 
         gridLayout_3 = new QGridLayout();
         gridLayout_3->setSpacing(6);
@@ -344,6 +345,16 @@ public:
 
         gridLayout_4->addLayout(horizontalLayout_4, 8, 0, 1, 1);
 
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setSpacing(6);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        horizontalSpacer = new QSpacerItem(498, 17, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_3->addItem(horizontalSpacer);
+
+
+        gridLayout_4->addLayout(horizontalLayout_3, 5, 0, 1, 1);
+
         horizontalLayout_6 = new QHBoxLayout();
         horizontalLayout_6->setSpacing(6);
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
@@ -353,12 +364,22 @@ public:
         icon13.addFile(QString::fromUtf8(":/Images/sendVideo.png"), QSize(), QIcon::Normal, QIcon::Off);
         toolButton_SendToInteractiveWall->setIcon(icon13);
         toolButton_SendToInteractiveWall->setIconSize(QSize(70, 30));
+        toolButton_SendToInteractiveWall->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
         horizontalLayout_6->addWidget(toolButton_SendToInteractiveWall);
 
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_6->addItem(horizontalSpacer_7);
+
+        toolButton_Settings = new QToolButton(centralWidget);
+        toolButton_Settings->setObjectName(QString::fromUtf8("toolButton_Settings"));
+        QIcon icon14;
+        icon14.addFile(QString::fromUtf8(":/Images/wrench73.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_Settings->setIcon(icon14);
+        toolButton_Settings->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
+
+        horizontalLayout_6->addWidget(toolButton_Settings);
 
         gridLayout_2 = new QGridLayout();
         gridLayout_2->setSpacing(6);
@@ -420,16 +441,6 @@ public:
 
         gridLayout_4->addLayout(horizontalLayout_6, 9, 0, 1, 1);
 
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        horizontalSpacer = new QSpacerItem(498, 17, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer);
-
-
-        gridLayout_4->addLayout(horizontalLayout_3, 5, 0, 1, 1);
-
         IVW_mainWindow->setCentralWidget(centralWidget);
         statusBar = new QStatusBar(IVW_mainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
@@ -478,9 +489,10 @@ public:
         toolButton_CloseApp->setText(QApplication::translate("IVW_mainWindow", "...", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("IVW_mainWindow", "Time:", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("IVW_mainWindow", "Frame:", 0, QApplication::UnicodeUTF8));
-        label_SendToWall->setText(QApplication::translate("IVW_mainWindow", "SEND TO INTERACTIVE VIDEO WALL", 0, QApplication::UnicodeUTF8));
-        toolButton_SendToInteractiveWall->setText(QApplication::translate("IVW_mainWindow", "...", 0, QApplication::UnicodeUTF8));
-        checkBox_AllVideo->setText(QApplication::translate("IVW_mainWindow", "All the video", 0, QApplication::UnicodeUTF8));
+        label_SendToWall->setText(QApplication::translate("IVW_mainWindow", "LAUNCH TO INTERACTIVE VIDEO WALL", 0, QApplication::UnicodeUTF8));
+        toolButton_SendToInteractiveWall->setText(QApplication::translate("IVW_mainWindow", "Launch", 0, QApplication::UnicodeUTF8));
+        toolButton_Settings->setText(QApplication::translate("IVW_mainWindow", "Settings", 0, QApplication::UnicodeUTF8));
+        checkBox_AllVideo->setText(QApplication::translate("IVW_mainWindow", "Load all frames", 0, QApplication::UnicodeUTF8));
         comboBox_ScaleHeight->clear();
         comboBox_ScaleHeight->insertItems(0, QStringList()
          << QApplication::translate("IVW_mainWindow", "1", 0, QApplication::UnicodeUTF8)
