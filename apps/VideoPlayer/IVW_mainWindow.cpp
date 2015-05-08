@@ -83,6 +83,7 @@ void IVW_mainWindow::ConnectSlots()
     QObject::connect(ui->toolButton_Prev, SIGNAL(clicked()), this, SLOT(toolButton_Prev_Clicked()));
     QObject::connect(ui->toolButton_PlayPause, SIGNAL(clicked()), this, SLOT(toolButton_PlayPause_Clicked()));
     QObject::connect(ui->toolButton_About, SIGNAL(clicked()), this, SLOT(toolButton_About_Clicked()));
+	QObject::connect(ui->toolButton_UserGuide, SIGNAL(clicked()), this, SLOT(toolButton_UserGuide_Clicked()));
     QObject::connect(ui->toolButton_AddFiles, SIGNAL(clicked()), this, SLOT(toolButton_AddFiles_Clicked()));
     QObject::connect(ui->toolButton_RemoveList, SIGNAL(clicked()), this, SLOT(toolButton_RemoveList_Clicked()));
     QObject::connect(ui->toolButton_UpTrack, SIGNAL(clicked()), this, SLOT(toolButton_UpTrack_Clicked()));
@@ -694,6 +695,15 @@ void IVW_mainWindow::toolButton_About_Clicked()
 		"ÁREA DE INNOVACIÓN TECNOLÓGICA - CBBC\n");
 	msgBox.exec();
 }
+
+
+// Button User guide
+void IVW_mainWindow::toolButton_UserGuide_Clicked()
+{
+	QDesktopServices::openUrl(QUrl("UserManual(Spanish).pdf"));
+}
+
+
 
 // If an item in the list has been double clicked
 void IVW_mainWindow::tableWidget_itemDoubleClicked(QTableWidgetItem* item)

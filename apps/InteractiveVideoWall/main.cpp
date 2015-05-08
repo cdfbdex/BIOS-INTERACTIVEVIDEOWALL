@@ -43,7 +43,8 @@ int threshold_value2 = 110;			// Upper threshold limit for binarization
 int MinSize = 1;					// Lower limit to filter blob by area
 int MaxSize = 30;					// Upper limit to filter blob by area
 
-int DistanceCroppingUnderneath = 0;
+int DistanceCroppingUnderneath = 0; // Number of pixels to filter in the image bottom
+int movementSensibility = 60;		// Sensibility of movement
 
 Mat finalDepthImage, finalDepthImage_gray;			// Final joined depth images
 Mat depthImage[MAX_POSSIBLE_SENSORS];				// 3-Channel gotten image from depth sensor
@@ -69,7 +70,6 @@ float P0 = 0.0;						// Centroid of biggest found Blob
 
 char* main_window_name = "Control Panel (Exit: ESC)";
 char* video_window_name = "Video";
-
 
 /// <summary>
 /// Get color image from sensor, and generate a matrix with its data.</summary>
@@ -146,12 +146,12 @@ void TrackObjects(int, void*)
 
 	// Create and structuring element for morphological operations
 	// morph_elem: 0=MORPH_RECT; 1=MORPH_CROSS; 2=MORPH_ELLIPSE
-	// Size(cols,rows): Size of structuring element - Point(x,y): Anchor position within the element /*TODO: VERIFICAR UTILIDAD DE ANCHOR http://docs.opencv.org/modules/imgproc/doc/filtering.html */
-	Mat element = getStructuringElement(morph_elem, Size(2 * morph_size + 3, 2 * morph_size + 3), Point(morph_size, morph_size));
+	// Size(cols,rows): Size of structuring element - Point(x,y): Anchor position within the element
+	Mat element = getStructuringElement(morph_elem, Size(2 * morph_size + 1, 2 * morph_size + 1), Point(morph_size, morph_size));
 
 	// Apply the specified morphological operation to finalBinaryImage matrix, and replace it
 	// operation: 0=MORPH_ERODE; 1=MORPH_DILATE; 2=MORPH_OPEN; 3=MORPH_CLOSE; 4=MORPH_GRADIENT; 5=MORPH_TOPHAT; 6=MORPH_BLACKHAT;
-	int operation = morph_operator;		/*TODO: VERIFICAR CAMBIOS DE OPERACION DE 0..6*/
+	int operation = morph_operator;
 	morphologyEx(finalBinaryImage, finalBinaryImage, operation, element);
 
 	//Converts finalBinaryImage to 3-Channel image
@@ -180,7 +180,6 @@ void TrackObjects(int, void*)
 	// info related to lifetime and position. Tracks assure that one blob has the same label while it is
 	// existing in different frames
 	// Constructor: cvUpdateTracks(CvBlobs const &b, CvTracks &t, const double thDistance, const unsigned int thInactive, const unsigned int thActive=0)
-	/*TODO: VERIFICAR PARAMETRO thDistance Y thInactive */
 	cvUpdateTracks(blobs, tracks, 5., 10);
 
 
@@ -460,6 +459,7 @@ int main(int argc, char** argv)
 		}
 	}
 
+	// Set width and height of each depth image
 	DepthImageWidth =  videoMode[0].getResolutionX();
 	DepthImageHeight = videoMode[0].getResolutionY();
 	
@@ -508,7 +508,6 @@ int main(int argc, char** argv)
 			finalFrame = numberOfFrames - 1;
 		}
 
-
 		cout << "Video Succesfully Loaded" << endl;
 		cout << "Number of frames = " << numberOfFrames << endl;
 	}
@@ -528,6 +527,7 @@ int main(int argc, char** argv)
 	int const max_kernel_size = 20;		// Max value for size of SE
 	int const max_value_size = 100;		// Max value for filtering size of blobs in the image
 	int const max_HeightCropping = DepthImageHeight/ScaleHeight;		// Max value for filter floor image
+	int const max_Sensibility = (DepthImageWidth*detectedDevices)/10;	// Max sensibility value in Pixels.
 
 	// Definition of trackbar labels
 	char* trackbar_MinDistValue = "Min. Dist";			// Labels for depth image binarization thresholds
@@ -537,7 +537,8 @@ int main(int argc, char** argv)
 	char* trackbar_Operator = "Operator";				// Label for morphological operation
 	char* trackbar_ShapeSE = "SE Shape";				// Label for SE shape -- 0:Rect - 1:Cross - 2:Ellipse
 	char* trackbar_SizeSE = "SE Size (2n+1)";			// Label for SE size
-	char* trackbar_HeightCropping = "Floor Filter";
+	char* trackbar_HeightCropping = "Floor Filter";		// Label for floor filter
+	char* trackbar_Sensibility = "Sensibility";			// Label for sensibility
 
 	// Windows Creation
 	namedWindow(main_window_name, CV_WINDOW_NORMAL);
@@ -549,8 +550,8 @@ int main(int argc, char** argv)
 	inFile.open("Settings.txt",ios::in);
 	if (inFile.is_open())
 	{
-		inFile >> threshold_value >> threshold_value2 >> MinSize >> MaxSize 
-			>> morph_operator >> morph_elem >> morph_size >> DistanceCroppingUnderneath;
+		inFile >> threshold_value >> threshold_value2 >> MinSize >> MaxSize >> morph_operator >> 
+			morph_elem >> morph_size >> DistanceCroppingUnderneath >> movementSensibility;
 
 		inFile.close();
 	}
@@ -571,8 +572,10 @@ int main(int argc, char** argv)
 	createTrackbar(trackbar_SizeSE, main_window_name, &morph_size, max_kernel_size, TrackObjects);
 	// Trackbar to filter floor from image
 	createTrackbar(trackbar_HeightCropping, main_window_name, &DistanceCroppingUnderneath, max_HeightCropping, TrackObjects);
+	// Trackbar to set up sensibility
+	createTrackbar(trackbar_Sensibility,main_window_name,&movementSensibility,max_Sensibility);
 
-
+	
 	// Images used in the TrackObjects function
 	bwImage = cvCreateImage(cvSize(DepthImageWidth*detectedDevices, DepthImageHeight/ScaleHeight), IPL_DEPTH_8U, 3);
 	labelImg = cvCreateImage(cvSize(DepthImageWidth*detectedDevices, DepthImageHeight/ScaleHeight), IPL_DEPTH_LABEL, 1);
@@ -582,6 +585,10 @@ int main(int argc, char** argv)
 	// Variables to allocate frames of video streams
 	//VideoFrameRef color_frame[MAX_POSSIBLE_SENSORS];	// Color frames are not used in this program
 	VideoFrameRef depth_frame[MAX_POSSIBLE_SENSORS];
+
+
+	vector<int> lastXPositions(30);			//Vector to allocate last read positions and calculate sensibility.
+
 
 	// Infinite loop for window updating and image processing
 	//bool exit = false;
@@ -677,7 +684,37 @@ int main(int argc, char** argv)
 
 		// Show the respective frame of the video, based on the centroid of the biggest founded blob 
 		cout << "P0 = " << P0 << endl;
-		int calculatedFrame = int((P0 / (DepthImageWidth*detectedDevices))*(numberOfFrames))+initialFrame;
+		
+		//Calculate frame based on X position of the biggest found blob.		
+		int calculatedFrame;
+		
+		//Append actual X position to the vector and erase the first position to keep original size
+		lastXPositions.erase(lastXPositions.begin());
+		lastXPositions.push_back(int(P0));
+
+		//Found maximum and minimum X position, to determine if the person is walking or not.
+		int maxXPosition = lastXPositions.at(0);
+		int minXPosition = lastXPositions.at(0);
+		for (vector<int>::iterator it = lastXPositions.begin(); it != lastXPositions.end(); ++it)
+		{
+			if (*it > maxXPosition)
+			{
+				maxXPosition = *it;
+			}
+			if (*it < minXPosition)
+			{
+				minXPosition = *it;
+			}
+			//cout << *it << " ";
+		}
+		//cout <<endl<< "MaxPosition: "<< maxXPosition << " - MinPosition: " << minXPosition << endl << endl;
+
+		// Calculate frame only if the change of last positions was bigger than configured sensibility
+		if (maxXPosition-minXPosition > movementSensibility || (minXPosition==0 && maxXPosition==0))
+		{
+			calculatedFrame = int((P0 / (DepthImageWidth*detectedDevices))*(numberOfFrames))+initialFrame;
+		}
+			
 		cout << "Frame = " << calculatedFrame << endl;
 
 		// Show calculatedFrame
@@ -705,7 +742,8 @@ int main(int argc, char** argv)
 	{
 		outFile << (int)threshold_value << '\n' << (int)threshold_value2 << '\n' 
 			<< (int)MinSize << '\n' << (int)MaxSize << '\n' << (int)morph_operator << '\n' 
-			<< (int)morph_elem << '\n' << (int)morph_size << '\n' << (int)DistanceCroppingUnderneath;
+			<< (int)morph_elem << '\n' << (int)morph_size << '\n' << (int)DistanceCroppingUnderneath 
+			<< '\n' << (int)movementSensibility;
 
 		outFile.close();
 	}

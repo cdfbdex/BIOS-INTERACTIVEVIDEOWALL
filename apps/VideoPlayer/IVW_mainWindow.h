@@ -54,6 +54,7 @@ private slots:
     void toolButton_Prev_Clicked();
     void toolButton_PlayPause_Clicked();
     void toolButton_About_Clicked();
+	void toolButton_UserGuide_Clicked();
     void toolButton_AddFiles_Clicked();
     void toolButton_RemoveList_Clicked();
     void toolButton_UpTrack_Clicked();

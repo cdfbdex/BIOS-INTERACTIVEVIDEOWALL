@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'IVW_mainWindow.ui'
 **
-** Created: Thu 30. Apr 10:25:10 2015
+** Created: Wed 6. May 09:54:30 2015
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -54,6 +54,7 @@ public:
     QToolButton *toolButton_Next;
     QToolButton *toolButton_FullScreen;
     QSpacerItem *horizontalSpacer_3;
+    QToolButton *toolButton_UserGuide;
     QToolButton *toolButton_About;
     QToolButton *toolButton_CloseApp;
     QTableWidget *tableWidget;
@@ -220,20 +221,30 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer_3);
 
+        toolButton_UserGuide = new QToolButton(centralWidget);
+        toolButton_UserGuide->setObjectName(QString::fromUtf8("toolButton_UserGuide"));
+        toolButton_UserGuide->setLayoutDirection(Qt::LeftToRight);
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/Images/userManual.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_UserGuide->setIcon(icon11);
+        toolButton_UserGuide->setIconSize(QSize(24, 24));
+
+        horizontalLayout_2->addWidget(toolButton_UserGuide);
+
         toolButton_About = new QToolButton(centralWidget);
         toolButton_About->setObjectName(QString::fromUtf8("toolButton_About"));
-        QIcon icon11;
-        icon11.addFile(QString::fromUtf8(":/Images/fileinfo-32.png"), QSize(), QIcon::Normal, QIcon::On);
-        toolButton_About->setIcon(icon11);
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/Images/fileinfo-32.png"), QSize(), QIcon::Normal, QIcon::On);
+        toolButton_About->setIcon(icon12);
         toolButton_About->setIconSize(QSize(24, 24));
 
         horizontalLayout_2->addWidget(toolButton_About);
 
         toolButton_CloseApp = new QToolButton(centralWidget);
         toolButton_CloseApp->setObjectName(QString::fromUtf8("toolButton_CloseApp"));
-        QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/Images/exit.png"), QSize(), QIcon::Normal, QIcon::On);
-        toolButton_CloseApp->setIcon(icon12);
+        QIcon icon13;
+        icon13.addFile(QString::fromUtf8(":/Images/exit.png"), QSize(), QIcon::Normal, QIcon::On);
+        toolButton_CloseApp->setIcon(icon13);
         toolButton_CloseApp->setIconSize(QSize(24, 24));
 
         horizontalLayout_2->addWidget(toolButton_CloseApp);
@@ -360,9 +371,9 @@ public:
         horizontalLayout_6->setObjectName(QString::fromUtf8("horizontalLayout_6"));
         toolButton_SendToInteractiveWall = new QToolButton(centralWidget);
         toolButton_SendToInteractiveWall->setObjectName(QString::fromUtf8("toolButton_SendToInteractiveWall"));
-        QIcon icon13;
-        icon13.addFile(QString::fromUtf8(":/Images/sendVideo.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_SendToInteractiveWall->setIcon(icon13);
+        QIcon icon14;
+        icon14.addFile(QString::fromUtf8(":/Images/sendVideo.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_SendToInteractiveWall->setIcon(icon14);
         toolButton_SendToInteractiveWall->setIconSize(QSize(70, 30));
         toolButton_SendToInteractiveWall->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
@@ -374,9 +385,9 @@ public:
 
         toolButton_Settings = new QToolButton(centralWidget);
         toolButton_Settings->setObjectName(QString::fromUtf8("toolButton_Settings"));
-        QIcon icon14;
-        icon14.addFile(QString::fromUtf8(":/Images/wrench73.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolButton_Settings->setIcon(icon14);
+        QIcon icon15;
+        icon15.addFile(QString::fromUtf8(":/Images/wrench73.png"), QSize(), QIcon::Normal, QIcon::Off);
+        toolButton_Settings->setIcon(icon15);
         toolButton_Settings->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
         horizontalLayout_6->addWidget(toolButton_Settings);
@@ -485,6 +496,10 @@ public:
         toolButton_PlayPause->setText(QApplication::translate("IVW_mainWindow", "...", 0, QApplication::UnicodeUTF8));
         toolButton_Next->setText(QApplication::translate("IVW_mainWindow", "...", 0, QApplication::UnicodeUTF8));
         toolButton_FullScreen->setText(QApplication::translate("IVW_mainWindow", "...", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        toolButton_UserGuide->setToolTip(QApplication::translate("IVW_mainWindow", "Open user manual (Spanish)", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        toolButton_UserGuide->setText(QApplication::translate("IVW_mainWindow", "User Manual", 0, QApplication::UnicodeUTF8));
         toolButton_About->setText(QApplication::translate("IVW_mainWindow", "...", 0, QApplication::UnicodeUTF8));
         toolButton_CloseApp->setText(QApplication::translate("IVW_mainWindow", "...", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("IVW_mainWindow", "Time:", 0, QApplication::UnicodeUTF8));
