@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\0cb40aa36e051b667618fd5a46d9967c\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{FF30EC62-8693-4730-B3DA-F1E2917260D3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

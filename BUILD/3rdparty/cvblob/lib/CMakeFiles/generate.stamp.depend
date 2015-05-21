@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/3rdparty/cvblob/cvBlob/CMakeLists.txt
+C:/opencv/build/OpenCVConfig-version.cmake
+C:/opencv/build/OpenCVConfig.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVConfig.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules-debug.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules-release.cmake

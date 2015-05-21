@@ -1,0 +1,56 @@
+﻿Build started 19/05/2015 4:44:41 p. m..
+     1>Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\IVW_Video_Player.vcxproj" on node 3 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\".
+       InitializeBuildStatus:
+         Creating "IVW_Video_Player.dir\Release\IVW_Video_Player.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt
+         CMake does not need to re-run because C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp is up-to-date.
+         Generating moc_IVW_mainWindow.cxx
+         Generating moc_IVW_settingsWindow.cxx
+         Generating ui_IVW_mainWindow.h
+         Generating ui_IVW_settingsWindow.h
+         Generating qrc_qplayer.cxx
+       MakeDirsForCl:
+         Creating directory "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\Release".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /IC:\Qt\4.8.4\include /IC:\Qt\4.8.4\include\phonon /IC:\Qt\4.8.4\include\QtMultimedia /IC:\Qt\4.8.4\include\QtGui /IC:\Qt\4.8.4\include\QtNetwork /IC:\Qt\4.8.4\include\QtCore /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D QT_DLL /D QT_NO_DEBUG /D QT_PHONON_LIB /D QT_MULTIMEDIA_LIB /D QT_GUI_LIB /D QT_NETWORK_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"IVW_Video_Player.dir\Release\\" /Fd"IVW_Video_Player.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\apps\VideoPlayer\IVW_mainWindow.cpp ..\..\..\apps\VideoPlayer\IVW_settingsWindow.cpp ..\..\..\apps\VideoPlayer\main.cpp moc_IVW_mainWindow.cxx moc_IVW_settingsWindow.cxx qrc_qplayer.cxx
+         IVW_mainWindow.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>..\..\..\apps\VideoPlayer\IVW_mainWindow.cpp(910): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>..\..\..\apps\VideoPlayer\IVW_mainWindow.cpp(934): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+         IVW_settingsWindow.cpp
+         main.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         moc_IVW_mainWindow.cxx
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         moc_IVW_settingsWindow.cxx
+         qrc_qplayer.cxx
+         Generating Code...
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D WIN32 /D _WINDOWS /D NDEBUG /D QT_DLL /D QT_NO_DEBUG /D QT_PHONON_LIB /D QT_MULTIMEDIA_LIB /D QT_GUI_LIB /D QT_NETWORK_LIB /D QT_CORE_LIB /D "CMAKE_INTDIR=\\\"Release\\\"" /l"0x0409" /IC:\opencv\build\include /IC:\opencv\build\include\opencv /IC:\Qt\4.8.4\include /IC:\Qt\4.8.4\include\phonon /IC:\Qt\4.8.4\include\QtMultimedia /IC:\Qt\4.8.4\include\QtGui /IC:\Qt\4.8.4\include\QtNetwork /IC:\Qt\4.8.4\include\QtCore /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer" /nologo /fo"IVW_Video_Player.dir\Release\IVW_setIcon.res" ..\..\..\apps\VideoPlayer\IVW_setIcon.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\IVW_Video_Player.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\Qt\4.8.4\lib\phonon4.lib C:\Qt\4.8.4\lib\QtMultimedia4.lib C:\Qt\4.8.4\lib\QtGui4.lib C:\Qt\4.8.4\lib\QtNetwork4.lib C:\Qt\4.8.4\lib\QtCore4.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2411.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib C:\opencv\build\x86\vc10\lib\opencv_superres2411.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2411.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2411.lib C:\Qt\4.8.4\lib\qtmain.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2411.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2411.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2411.lib C:\opencv\build\x86\vc10\lib\opencv_photo2411.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2411.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2411.lib C:\opencv\build\x86\vc10\lib\opencv_video2411.lib C:\opencv\build\x86\vc10\lib\opencv_ml2411.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2411.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2411.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2411.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2411.lib C:\opencv\build\x86\vc10\lib\opencv_flann2411.lib C:\opencv\build\x86\vc10\lib\opencv_core2411.lib /MANIFEST /ManifestFile:"IVW_Video_Player.dir\Release\IVW_Video_Player.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/IVW_Video_Player.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/IVW_Video_Player.lib" /MACHINE:X86 IVW_Video_Player.dir\Release\IVW_setIcon.res
+         IVW_Video_Player.dir\Release\IVW_mainWindow.obj
+         IVW_Video_Player.dir\Release\IVW_settingsWindow.obj
+         IVW_Video_Player.dir\Release\main.obj
+         IVW_Video_Player.dir\Release\moc_IVW_mainWindow.obj
+         IVW_Video_Player.dir\Release\moc_IVW_settingsWindow.obj
+         IVW_Video_Player.dir\Release\qrc_qplayer.obj  /machine:X86 
+         IVW_Video_Player.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\IVW_Video_Player.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\IVW_Video_Player.exe;#1" /manifest IVW_Video_Player.dir\Release\IVW_Video_Player.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "IVW_Video_Player.dir\Release\IVW_Video_Player.unsuccessfulbuild".
+         Touching "IVW_Video_Player.dir\Release\IVW_Video_Player.lastbuildstate".
+     1>Done Building Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\IVW_Video_Player.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:14.96

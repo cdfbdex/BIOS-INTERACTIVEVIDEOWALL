@@ -1,0 +1,4 @@
+C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/apps/InteractiveVideoWall/CMakeFiles/IVW_Application.dir
+C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/3rdparty/cvblob/CMakeFiles/ALL_BUILD.dir
+C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/ZERO_CHECK.dir
+C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/3rdparty/cvblob/lib/CMakeFiles/cvblob.dir

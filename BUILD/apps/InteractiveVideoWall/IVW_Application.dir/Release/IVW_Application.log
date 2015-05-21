@@ -1,0 +1,28 @@
+﻿Build started 19/05/2015 4:44:48 p. m..
+     1>Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\InteractiveVideoWall\IVW_Application.vcxproj" on node 3 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "IVW_Application.dir\Release\IVW_Application.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall/CMakeLists.txt
+         CMake does not need to re-run because C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\InteractiveVideoWall\CMakeFiles\generate.stamp is up-to-date.
+       MakeDirsForCl:
+         Creating directory "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\InteractiveVideoWall\Release".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\3rdparty\cvblob\include" /I"C:\Program Files (x86)\OpenNI2\Include" /I"C:\Program Files (x86)\PrimeSense\NiTE2\Include" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall\..\..\3rdparty\cvblob\include" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"IVW_Application.dir\Release\\" /Fd"IVW_Application.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\apps\InteractiveVideoWall\main.cpp
+         main.cpp
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\\\"Release\\\"" /l"0x0409" /IC:\opencv\build\include /IC:\opencv\build\include\opencv /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\3rdparty\cvblob\include" /I"C:\Program Files (x86)\OpenNI2\Include" /I"C:\Program Files (x86)\PrimeSense\NiTE2\Include" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall\..\..\3rdparty\cvblob\include" /nologo /fo"IVW_Application.dir\Release\setIcon.res" ..\..\..\apps\InteractiveVideoWall\setIcon.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\IVW_Application.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib" /LIBPATH:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib/Release" /LIBPATH:"C:/Program Files (x86)/OpenNI2/Lib/OpenNI2.lib" /LIBPATH:"C:/Program Files (x86)/OpenNI2/Lib/OpenNI2.lib/Release" /LIBPATH:"C:/Program Files (x86)/PrimeSense/NiTE2/Lib/NiTE2.lib" /LIBPATH:"C:/Program Files (x86)/PrimeSense/NiTE2/Lib/NiTE2.lib/Release" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib "C:\Program Files (x86)\OpenNI2\Lib\OpenNI2.lib" "C:\Program Files (x86)\PrimeSense\NiTE2\Lib\NiTE2.lib" ..\..\lib\Release\cvblob.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2411.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib C:\opencv\build\x86\vc10\lib\opencv_superres2411.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2411.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2411.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2411.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2411.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2411.lib C:\opencv\build\x86\vc10\lib\opencv_photo2411.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2411.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2411.lib C:\opencv\build\x86\vc10\lib\opencv_video2411.lib C:\opencv\build\x86\vc10\lib\opencv_ml2411.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2411.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2411.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2411.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2411.lib C:\opencv\build\x86\vc10\lib\opencv_flann2411.lib C:\opencv\build\x86\vc10\lib\opencv_core2411.lib /MANIFEST /ManifestFile:"IVW_Application.dir\Release\IVW_Application.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/IVW_Application.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/IVW_Application.lib" /MACHINE:X86 IVW_Application.dir\Release\setIcon.res
+         IVW_Application.dir\Release\main.obj  /machine:X86 
+         IVW_Application.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\IVW_Application.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\IVW_Application.exe;#1" /manifest IVW_Application.dir\Release\IVW_Application.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "IVW_Application.dir\Release\IVW_Application.unsuccessfulbuild".
+         Touching "IVW_Application.dir\Release\IVW_Application.lastbuildstate".
+     1>Done Building Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\InteractiveVideoWall\IVW_Application.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.00

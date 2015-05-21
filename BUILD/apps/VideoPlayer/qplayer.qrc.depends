@@ -1,0 +1,32 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Images/wrench73.png</file>
+    <file>Images/logo-bios.jpg</file>
+    <file>Images/userManual.png</file>
+    <file>Images/VideoWall_icon.ico</file>
+    <file>Images/videowall_icon_2.ico</file>
+    <file>Images/sendVideo.png</file>
+    <file>Images/application-exit.png</file>
+    <file>Images/delete.png</file>
+    <file>Images/fileopen.png</file>
+    <file>Images/next.png</file>
+    <file>Images/pause.png</file>
+    <file>Images/play.png</file>
+    <file>Images/prev.png</file>
+    <file>Images/stop.png</file>
+    <file>Images/info.png</file>
+    <file>Images/exit.png</file>
+    <file>Images/remove.png</file>
+    <file>Images/qt.png</file>
+    <file>Images/plus.png</file>
+    <file>Images/editcut.png</file>
+    <file>Images/fileinfo-32.png</file>
+    <file>Images/list-add.png</file>
+    <file>Images/list-remove.png</file>
+    <file>Images/down.png</file>
+    <file>Images/down-32.png</file>
+    <file>Images/up.png</file>
+    <file>Images/up-32.png</file>
+    <file>Images/auto_layout.png</file>
+  </qresource>
+</RCC>

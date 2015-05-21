@@ -1,0 +1,156 @@
+Determining if the Q_WS_X11 exist failed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec2350188573.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft (R) Build Engine, versi¢n 4.0.30319.18408
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 19/05/2015 4:42:53 p. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec2350188573.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec2350188573.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec2350188573.dir\Debug\cmTryCompileExec2350188573.unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2350188573.dir\Debug\\" /Fd"cmTryCompileExec2350188573.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue CheckSymbolExists.cxx
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec2350188573.dir\Debug\\" /Fd"cmTryCompileExec2350188573.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue CheckSymbolExists.cxx
+  
+  CheckSymbolExists.cxx
+CheckSymbolExists.cxx(8): error C2065: 'Q_WS_X11' : undeclared identifier [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec2350188573.vcxproj]
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec2350188573.vcxproj" (destinos predeterminados) -- ERROR.
+
+ERROR al compilar.
+
+"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec2350188573.vcxproj" (destino predeterminado) (1) ->
+(ClCompile destino) -> 
+  CheckSymbolExists.cxx(8): error C2065: 'Q_WS_X11' : undeclared identifier [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec2350188573.vcxproj]
+
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:00.34
+
+File C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec4202219861.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft (R) Build Engine, versi¢n 4.0.30319.18408
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 19/05/2015 4:42:55 p. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec4202219861.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec4202219861.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec4202219861.dir\Debug\cmTryCompileExec4202219861.unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec4202219861.dir\Debug\\" /Fd"cmTryCompileExec4202219861.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue CheckSymbolExists.cxx
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec4202219861.dir\Debug\\" /Fd"cmTryCompileExec4202219861.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue CheckSymbolExists.cxx
+  
+  CheckSymbolExists.cxx
+CheckSymbolExists.cxx(8): error C2065: 'Q_WS_QWS' : undeclared identifier [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec4202219861.vcxproj]
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec4202219861.vcxproj" (destinos predeterminados) -- ERROR.
+
+ERROR al compilar.
+
+"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec4202219861.vcxproj" (destino predeterminado) (1) ->
+(ClCompile destino) -> 
+  CheckSymbolExists.cxx(8): error C2065: 'Q_WS_QWS' : undeclared identifier [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec4202219861.vcxproj]
+
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:00.35
+
+File C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Windows/Microsoft.NET/Framework/v4.0.30319/MSBuild.exe" "cmTryCompileExec1438111677.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=10.0"
+Microsoft (R) Build Engine, versi¢n 4.0.30319.18408
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 19/05/2015 4:42:55 p. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec1438111677.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec1438111677.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\Debug\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec1438111677.dir\Debug\cmTryCompileExec1438111677.unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1438111677.dir\Debug\\" /Fd"cmTryCompileExec1438111677.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue CheckSymbolExists.cxx
+  Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 16.00.30319.01 for 80x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1438111677.dir\Debug\\" /Fd"cmTryCompileExec1438111677.dir\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:queue CheckSymbolExists.cxx
+  
+  CheckSymbolExists.cxx
+CheckSymbolExists.cxx(8): error C2065: 'Q_WS_MAC' : undeclared identifier [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec1438111677.vcxproj]
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec1438111677.vcxproj" (destinos predeterminados) -- ERROR.
+
+ERROR al compilar.
+
+"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec1438111677.vcxproj" (destino predeterminado) (1) ->
+(ClCompile destino) -> 
+  CheckSymbolExists.cxx(8): error C2065: 'Q_WS_MAC' : undeclared identifier [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec1438111677.vcxproj]
+
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:00.32
+
+File C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

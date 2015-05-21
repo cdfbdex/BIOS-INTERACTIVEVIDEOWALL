@@ -1,0 +1,159 @@
+Determining if the Q_WS_X11 exist failed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec3285515429.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:55 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3285515429.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec3285515429.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec3285515429.dir\Debug\cmTryCom.D8C77207.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec3285515429.dir\Debug\cmTryCom.D8C77207.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3285515429.dir\Debug\\" /Fd"cmTryCompileExec3285515429.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3285515429.dir\Debug\\" /Fd"cmTryCompileExec3285515429.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  
+  CheckSymbolExists.cxx
+C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(8): error C2065: 'Q_WS_X11' : identificador no declarado [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3285515429.vcxproj]
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3285515429.vcxproj" (destinos predeterminados) -- ERROR.
+
+ERROR al compilar.
+
+"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3285515429.vcxproj" (destino predeterminado) (1) ->
+(ClCompile destino) -> 
+  C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(8): error C2065: 'Q_WS_X11' : identificador no declarado [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3285515429.vcxproj]
+
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:01.34
+
+File C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_X11
+  return ((int*)(&Q_WS_X11))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec3711074526.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:57 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3711074526.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec3711074526.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec3711074526.dir\Debug\cmTryCom.F2F3FB4E.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec3711074526.dir\Debug\cmTryCom.F2F3FB4E.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3711074526.dir\Debug\\" /Fd"cmTryCompileExec3711074526.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3711074526.dir\Debug\\" /Fd"cmTryCompileExec3711074526.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  CheckSymbolExists.cxx
+  
+C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(8): error C2065: 'Q_WS_QWS' : identificador no declarado [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3711074526.vcxproj]
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3711074526.vcxproj" (destinos predeterminados) -- ERROR.
+
+ERROR al compilar.
+
+"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3711074526.vcxproj" (destino predeterminado) (1) ->
+(ClCompile destino) -> 
+  C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(8): error C2065: 'Q_WS_QWS' : identificador no declarado [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3711074526.vcxproj]
+
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:00.45
+
+File C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec440075916.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:58 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec440075916.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec440075916.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec440075916.dir\Debug\cmTryCom.139772C3.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec440075916.dir\Debug\cmTryCom.139772C3.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec440075916.dir\Debug\\" /Fd"cmTryCompileExec440075916.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec440075916.dir\Debug\\" /Fd"cmTryCompileExec440075916.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  
+  CheckSymbolExists.cxx
+C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(8): error C2065: 'Q_WS_MAC' : identificador no declarado [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec440075916.vcxproj]
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec440075916.vcxproj" (destinos predeterminados) -- ERROR.
+
+ERROR al compilar.
+
+"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec440075916.vcxproj" (destino predeterminado) (1) ->
+(ClCompile destino) -> 
+  C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx(8): error C2065: 'Q_WS_MAC' : identificador no declarado [C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec440075916.vcxproj]
+
+    0 Advertencia(s)
+    1 Errores
+
+Tiempo transcurrido 00:00:00.45
+
+File C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

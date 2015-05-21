@@ -1,0 +1,618 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{94545558-5F16-4C8A-BDED-7A8EF423B2F0}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>IVW_Video_Player</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IVW_Video_Player.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">IVW_Video_Player</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IVW_Video_Player.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">IVW_Video_Player</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">IVW_Video_Player.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">IVW_Video_Player</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">IVW_Video_Player.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">IVW_Video_Player</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_DLL;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;QT_DLL;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.4\lib\phonond4.lib;C:\Qt\4.8.4\lib\QtMultimediad4.lib;C:\Qt\4.8.4\lib\QtGuid4.lib;C:\Qt\4.8.4\lib\QtNetworkd4.lib;C:\Qt\4.8.4\lib\QtCored4.lib;C:\opencv\build\x86\vc10\lib\opencv_videostab2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ts2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_superres2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_stitching2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_contrib2411d.lib;C:\Qt\4.8.4\lib\qtmaind.lib;C:\opencv\build\x86\vc10\lib\opencv_nonfree2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ocl2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_gpu2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_photo2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_objdetect2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_legacy2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_video2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ml2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_calib3d2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_features2d2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_highgui2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_imgproc2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_flann2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_core2411d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Debug/IVW_Video_Player.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Debug/IVW_Video_Player.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_NO_DEBUG;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_NO_DEBUG;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.4\lib\phonon4.lib;C:\Qt\4.8.4\lib\QtMultimedia4.lib;C:\Qt\4.8.4\lib\QtGui4.lib;C:\Qt\4.8.4\lib\QtNetwork4.lib;C:\Qt\4.8.4\lib\QtCore4.lib;C:\opencv\build\x86\vc10\lib\opencv_videostab2411.lib;C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib;C:\opencv\build\x86\vc10\lib\opencv_superres2411.lib;C:\opencv\build\x86\vc10\lib\opencv_stitching2411.lib;C:\opencv\build\x86\vc10\lib\opencv_contrib2411.lib;C:\Qt\4.8.4\lib\qtmain.lib;C:\opencv\build\x86\vc10\lib\opencv_nonfree2411.lib;C:\opencv\build\x86\vc10\lib\opencv_ocl2411.lib;C:\opencv\build\x86\vc10\lib\opencv_gpu2411.lib;C:\opencv\build\x86\vc10\lib\opencv_photo2411.lib;C:\opencv\build\x86\vc10\lib\opencv_objdetect2411.lib;C:\opencv\build\x86\vc10\lib\opencv_legacy2411.lib;C:\opencv\build\x86\vc10\lib\opencv_video2411.lib;C:\opencv\build\x86\vc10\lib\opencv_ml2411.lib;C:\opencv\build\x86\vc10\lib\opencv_calib3d2411.lib;C:\opencv\build\x86\vc10\lib\opencv_features2d2411.lib;C:\opencv\build\x86\vc10\lib\opencv_highgui2411.lib;C:\opencv\build\x86\vc10\lib\opencv_imgproc2411.lib;C:\opencv\build\x86\vc10\lib\opencv_flann2411.lib;C:\opencv\build\x86\vc10\lib\opencv_core2411.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/IVW_Video_Player.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/IVW_Video_Player.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_NO_DEBUG;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_NO_DEBUG;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.4\lib\phonon4.lib;C:\Qt\4.8.4\lib\QtMultimedia4.lib;C:\Qt\4.8.4\lib\QtGui4.lib;C:\Qt\4.8.4\lib\QtNetwork4.lib;C:\Qt\4.8.4\lib\QtCore4.lib;C:\opencv\build\x86\vc10\lib\opencv_videostab2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ts2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_superres2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_stitching2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_contrib2411d.lib;C:\Qt\4.8.4\lib\qtmain.lib;C:\opencv\build\x86\vc10\lib\opencv_nonfree2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ocl2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_gpu2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_photo2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_objdetect2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_legacy2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_video2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ml2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_calib3d2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_features2d2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_highgui2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_imgproc2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_flann2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_core2411d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/MinSizeRel/IVW_Video_Player.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/MinSizeRel/IVW_Video_Player.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_NO_DEBUG;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;QT_DLL;QT_NO_DEBUG;QT_PHONON_LIB;QT_MULTIMEDIA_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\opencv\build\include;C:\opencv\build\include\opencv;C:\Qt\4.8.4\include;C:\Qt\4.8.4\include\phonon;C:\Qt\4.8.4\include\QtMultimedia;C:\Qt\4.8.4\include\QtGui;C:\Qt\4.8.4\include\QtNetwork;C:\Qt\4.8.4\include\QtCore;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:X86 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Qt\4.8.4\lib\phonon4.lib;C:\Qt\4.8.4\lib\QtMultimedia4.lib;C:\Qt\4.8.4\lib\QtGui4.lib;C:\Qt\4.8.4\lib\QtNetwork4.lib;C:\Qt\4.8.4\lib\QtCore4.lib;C:\opencv\build\x86\vc10\lib\opencv_videostab2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ts2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_superres2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_stitching2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_contrib2411d.lib;C:\Qt\4.8.4\lib\qtmain.lib;C:\opencv\build\x86\vc10\lib\opencv_nonfree2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ocl2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_gpu2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_photo2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_objdetect2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_legacy2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_video2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_ml2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_calib3d2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_features2d2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_highgui2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_imgproc2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_flann2411d.lib;C:\opencv\build\x86\vc10\lib\opencv_core2411d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/RelWithDebInfo/IVW_Video_Player.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/RelWithDebInfo/IVW_Video_Player.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL -BC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD --check-stamp-file C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakePushCheckState.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4Macros.cmake;C:\opencv\build\OpenCVConfig-version.cmake;C:\opencv\build\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-debug.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-release.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\UseQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL -BC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD --check-stamp-file C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakePushCheckState.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4Macros.cmake;C:\opencv\build\OpenCVConfig-version.cmake;C:\opencv\build\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-debug.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-release.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\UseQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL -BC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD --check-stamp-file C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakePushCheckState.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4Macros.cmake;C:\opencv\build\OpenCVConfig-version.cmake;C:\opencv\build\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-debug.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-release.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\UseQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -HC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL -BC:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD --check-stamp-file C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/CMakeLists.txt;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckCXXSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CheckSymbolExists.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\MacroAddFileDependencies.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakePushCheckState.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4ConfigDependentSettings.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\Qt4Macros.cmake;C:\opencv\build\OpenCVConfig-version.cmake;C:\opencv\build\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVConfig.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-debug.cmake;C:\opencv\build\x86\vc10\lib\OpenCVModules-release.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\UseQt4.cmake;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeConfigurableFile.in;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\CMakeFiles\generate.stamp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\b9699bd85ae3900cd9f60a0c700634b0\moc_IVW_mainWindow.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_IVW_mainWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_mainWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_mainWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_IVW_mainWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_mainWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_mainWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_IVW_mainWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_mainWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_mainWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_IVW_mainWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_mainWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_mainWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_mainWindow.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\CMakeFiles\b9699bd85ae3900cd9f60a0c700634b0\moc_IVW_settingsWindow.cxx.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating moc_IVW_settingsWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_settingsWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_settingsWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating moc_IVW_settingsWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_settingsWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_settingsWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating moc_IVW_settingsWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_settingsWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_settingsWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating moc_IVW_settingsWindow.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+cd C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+C:\Qt\4.8.4\bin\moc.exe @C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/moc_IVW_settingsWindow.cxx_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/CMakeFiles/b9699bd85ae3900cd9f60a0c700634b0/moc_IVW_settingsWindow.cxx.rule;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.h;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx_parameters;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\moc_IVW_settingsWindow.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\IVW_mainWindow.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_IVW_mainWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_mainWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_mainWindow.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_IVW_mainWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_mainWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_mainWindow.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_IVW_mainWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_mainWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_mainWindow.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_IVW_mainWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_mainWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_mainWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_mainWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_mainWindow.h</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\IVW_settingsWindow.ui">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating ui_IVW_settingsWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_settingsWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_settingsWindow.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating ui_IVW_settingsWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_settingsWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_settingsWindow.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating ui_IVW_settingsWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_settingsWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_settingsWindow.h</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating ui_IVW_settingsWindow.h</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Qt\4.8.4\bin\uic.exe -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/ui_IVW_settingsWindow.h C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/IVW_settingsWindow.ui;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\IVW_settingsWindow.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\ui_IVW_settingsWindow.h</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\qplayer.qrc">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generating qrc_qplayer.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Qt\4.8.4\bin\rcc.exe -name qplayer -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/qrc_qplayer.cxx C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\wrench73.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\logo-bios.jpg;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\userManual.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\VideoWall_icon.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\videowall_icon_2.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\sendVideo.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\application-exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\delete.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileopen.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\next.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\pause.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\play.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\prev.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\stop.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\info.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\qt.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\plus.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\editcut.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileinfo-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-add.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\auto_layout.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qplayer.qrc.depends;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qrc_qplayer.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generating qrc_qplayer.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Qt\4.8.4\bin\rcc.exe -name qplayer -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/qrc_qplayer.cxx C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\wrench73.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\logo-bios.jpg;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\userManual.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\VideoWall_icon.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\videowall_icon_2.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\sendVideo.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\application-exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\delete.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileopen.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\next.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\pause.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\play.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\prev.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\stop.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\info.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\qt.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\plus.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\editcut.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileinfo-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-add.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\auto_layout.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qplayer.qrc.depends;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qrc_qplayer.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Generating qrc_qplayer.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Qt\4.8.4\bin\rcc.exe -name qplayer -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/qrc_qplayer.cxx C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\wrench73.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\logo-bios.jpg;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\userManual.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\VideoWall_icon.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\videowall_icon_2.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\sendVideo.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\application-exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\delete.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileopen.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\next.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\pause.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\play.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\prev.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\stop.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\info.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\qt.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\plus.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\editcut.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileinfo-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-add.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\auto_layout.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qplayer.qrc.depends;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qrc_qplayer.cxx</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Generating qrc_qplayer.cxx</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Qt\4.8.4\bin\rcc.exe -name qplayer -o C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/apps/VideoPlayer/qrc_qplayer.cxx C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/VideoPlayer/qplayer.qrc;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\wrench73.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\logo-bios.jpg;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\userManual.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\VideoWall_icon.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\videowall_icon_2.ico;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\sendVideo.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\application-exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\delete.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileopen.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\next.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\pause.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\play.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\prev.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\stop.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\info.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\exit.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\qt.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\plus.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\editcut.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\fileinfo-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-add.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\list-remove.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\down-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\up-32.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\Images\auto_layout.png;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qplayer.qrc.depends;C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\VideoPlayer\qplayer.qrc;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\VideoPlayer\qrc_qplayer.cxx</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_IVW_mainWindow.h" />
+    <ClInclude Include="ui_IVW_settingsWindow.h" />
+    <ClCompile Include="..\..\..\apps\VideoPlayer\IVW_mainWindow.cpp"  />
+    <ClCompile Include="..\..\..\apps\VideoPlayer\IVW_settingsWindow.cpp"  />
+    <ClCompile Include="..\..\..\apps\VideoPlayer\main.cpp"  />
+    <ResourceCompile Include="..\..\..\apps\VideoPlayer\IVW_setIcon.rc"  />
+    <ClCompile Include="moc_IVW_mainWindow.cxx"  />
+    <ClCompile Include="moc_IVW_settingsWindow.cxx"  />
+    <ClCompile Include="qrc_qplayer.cxx"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/ZERO_CHECK.vcxproj">
+      <Project>AF4D129E-9A7E-42C4-AC92-6242F792694B</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

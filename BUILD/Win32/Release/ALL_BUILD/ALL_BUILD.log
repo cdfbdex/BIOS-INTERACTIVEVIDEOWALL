@@ -1,0 +1,15 @@
+﻿Build started 19/05/2015 4:44:57 p. m..
+     1>Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\ALL_BUILD.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Win32\Release\ALL_BUILD\ALL_BUILD.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/CMakeLists.txt
+         CMake does not need to re-run because C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\CMakeFiles\generate.stamp is up-to-date.
+       FinalizeBuildStatus:
+         Deleting file "Win32\Release\ALL_BUILD\ALL_BUILD.unsuccessfulbuild".
+         Touching "Win32\Release\ALL_BUILD\ALL_BUILD.lastbuildstate".
+     1>Done Building Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\ALL_BUILD.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.10

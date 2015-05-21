@@ -1,0 +1,78 @@
+﻿Build started 19/05/2015 4:44:48 p. m..
+     1>Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\MultiHandInteractionTUIO\MultiHandInteraction.vcxproj" on node 4 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "MultiHandInteraction.dir\Release\MultiHandInteraction.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/MultiHandInteractionTUIO/CMakeLists.txt
+         CMake does not need to re-run because C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\MultiHandInteractionTUIO\CMakeFiles\generate.stamp is up-to-date.
+       MakeDirsForCl:
+         Creating directory "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\MultiHandInteractionTUIO\Release".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\3rdparty\cvblob\include" /I"C:\Program Files (x86)\OpenNI2\Include" /I"C:\Program Files (x86)\PrimeSense\NiTE2\Include" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\MultiHandInteractionTUIO\..\..\3rdparty\oscpack" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\MultiHandInteractionTUIO\..\..\3rdparty\TUIO" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\MultiHandInteractionTUIO" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\MultiHandInteractionTUIO\..\..\3rdparty\cvblob\include" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"MultiHandInteraction.dir\Release\\" /Fd"MultiHandInteraction.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\apps\MultiHandInteractionTUIO\main.cpp ..\..\..\3rdparty\oscpack\ip\win32\NetworkingUtils.cpp ..\..\..\3rdparty\oscpack\ip\win32\UdpSocket.cpp ..\..\..\3rdparty\oscpack\ip\IpEndpointName.cpp ..\..\..\3rdparty\oscpack\osc\OscOutboundPacketStream.cpp ..\..\..\3rdparty\oscpack\osc\OscPrintReceivedElements.cpp ..\..\..\3rdparty\oscpack\osc\OscReceivedElements.cpp ..\..\..\3rdparty\oscpack\osc\OscTypes.cpp ..\..\..\3rdparty\TUIO\TuioClient.cpp ..\..\..\3rdparty\TUIO\TuioServer.cpp ..\..\..\3rdparty\TUIO\TuioTime.cpp
+         main.cpp
+     1>..\..\..\apps\MultiHandInteractionTUIO\main.cpp(158): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\apps\MultiHandInteractionTUIO\main.cpp(158): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\apps\MultiHandInteractionTUIO\main.cpp(160): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\apps\MultiHandInteractionTUIO\main.cpp(160): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         NetworkingUtils.cpp
+         UdpSocket.cpp
+         IpEndpointName.cpp
+     1>..\..\..\3rdparty\oscpack\ip\IpEndpointName.cpp(46): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>..\..\..\3rdparty\oscpack\ip\IpEndpointName.cpp(52): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>..\..\..\3rdparty\oscpack\ip\IpEndpointName.cpp(61): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>..\..\..\3rdparty\oscpack\ip\IpEndpointName.cpp(67): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>..\..\..\3rdparty\oscpack\ip\IpEndpointName.cpp(71): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+     1>..\..\..\3rdparty\oscpack\ip\IpEndpointName.cpp(78): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(371) : see declaration of 'sprintf'
+         OscOutboundPacketStream.cpp
+     1>..\..\..\3rdparty\oscpack\osc\OscOutboundPacketStream.cpp(339): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+     1>..\..\..\3rdparty\oscpack\osc\OscOutboundPacketStream.cpp(581): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+     1>..\..\..\3rdparty\oscpack\osc\OscOutboundPacketStream.cpp(601): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+         OscPrintReceivedElements.cpp
+     1>..\..\..\3rdparty\oscpack\osc\OscPrintReceivedElements.cpp(117): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\time.inl(86) : see declaration of 'ctime'
+     1>..\..\..\3rdparty\oscpack\osc\OscPrintReceivedElements.cpp(120): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(105) : see declaration of 'strcpy'
+         OscReceivedElements.cpp
+         OscTypes.cpp
+         TuioClient.cpp
+     1>..\..\..\3rdparty\TUIO\TuioClient.cpp(85): warning C4101: 'e' : unreferenced local variable
+         TuioServer.cpp
+     1>..\..\..\3rdparty\TUIO\TuioServer.cpp(204): warning C4244: '=' : conversion from '__int64' to 'long', possible loss of data
+     1>..\..\..\3rdparty\TUIO\TuioServer.cpp(196): warning C4101: 'e' : unreferenced local variable
+     1>..\..\..\3rdparty\TUIO\TuioServer.cpp(448): warning C4244: '=' : conversion from '__int64' to 'long', possible loss of data
+     1>..\..\..\3rdparty\TUIO\TuioServer.cpp(469): warning C4244: '=' : conversion from '__int64' to 'long', possible loss of data
+         TuioTime.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\MultiHandInteraction.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib" /LIBPATH:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib/Release" /LIBPATH:"C:/Program Files (x86)/OpenNI2/Lib/OpenNI2.lib" /LIBPATH:"C:/Program Files (x86)/OpenNI2/Lib/OpenNI2.lib/Release" /LIBPATH:"C:/Program Files (x86)/PrimeSense/NiTE2/Lib/NiTE2.lib" /LIBPATH:"C:/Program Files (x86)/PrimeSense/NiTE2/Lib/NiTE2.lib/Release" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib "C:\Program Files (x86)\OpenNI2\Lib\OpenNI2.lib" "C:\Program Files (x86)\PrimeSense\NiTE2\Lib\NiTE2.lib" ..\..\lib\Release\cvblob.lib winmm.lib ws2_32.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2411.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib C:\opencv\build\x86\vc10\lib\opencv_superres2411.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2411.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2411.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2411.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2411.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2411.lib C:\opencv\build\x86\vc10\lib\opencv_photo2411.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2411.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2411.lib C:\opencv\build\x86\vc10\lib\opencv_video2411.lib C:\opencv\build\x86\vc10\lib\opencv_ml2411.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2411.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2411.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2411.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2411.lib C:\opencv\build\x86\vc10\lib\opencv_flann2411.lib C:\opencv\build\x86\vc10\lib\opencv_core2411.lib /MANIFEST /ManifestFile:"MultiHandInteraction.dir\Release\MultiHandInteraction.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiHandInteraction.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiHandInteraction.lib" /MACHINE:X86 MultiHandInteraction.dir\Release\main.obj
+         MultiHandInteraction.dir\Release\NetworkingUtils.obj
+         MultiHandInteraction.dir\Release\UdpSocket.obj
+         MultiHandInteraction.dir\Release\IpEndpointName.obj
+         MultiHandInteraction.dir\Release\OscOutboundPacketStream.obj
+         MultiHandInteraction.dir\Release\OscPrintReceivedElements.obj
+         MultiHandInteraction.dir\Release\OscReceivedElements.obj
+         MultiHandInteraction.dir\Release\OscTypes.obj
+         MultiHandInteraction.dir\Release\TuioClient.obj
+         MultiHandInteraction.dir\Release\TuioServer.obj
+         MultiHandInteraction.dir\Release\TuioTime.obj  /machine:X86 
+            Creating library C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiHandInteraction.lib and object C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiHandInteraction.exp
+         MultiHandInteraction.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\MultiHandInteraction.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\MultiHandInteraction.exe;#1" /manifest MultiHandInteraction.dir\Release\MultiHandInteraction.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "MultiHandInteraction.dir\Release\MultiHandInteraction.unsuccessfulbuild".
+         Touching "MultiHandInteraction.dir\Release\MultiHandInteraction.lastbuildstate".
+     1>Done Building Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\MultiHandInteractionTUIO\MultiHandInteraction.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.84

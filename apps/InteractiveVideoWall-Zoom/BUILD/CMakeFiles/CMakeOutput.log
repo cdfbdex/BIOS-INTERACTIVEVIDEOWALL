@@ -1,0 +1,393 @@
+The system is: Windows - 6.2 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:45 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\3.2.1\CompilerIdC\CompilerIdC.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "Debug\".
+  Creando directorio "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Se crear  "Debug\CompilerIdC.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\3.2.1\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\3.2.1\CompilerIdC\CompilerIdC.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:01.79
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/3.2.1/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:47 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\3.2.1\CompilerIdCXX\CompilerIdCXX.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "Debug\".
+  Creando directorio "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Se crear  "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\3.2.1\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\3.2.1\CompilerIdCXX\CompilerIdCXX.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.53
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/3.2.1/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec635657625.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:47 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec635657625.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec635657625.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec635657625.dir\Debug\cmTryCom.DDDB71F3.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec635657625.dir\Debug\cmTryCom.DDDB71F3.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec635657625.dir\Debug\\" /Fd"cmTryCompileExec635657625.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\testCCompiler.c"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec635657625.dir\Debug\\" /Fd"cmTryCompileExec635657625.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\testCCompiler.c"
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec635657625.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec635657625.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec635657625.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec635657625.dir\Debug\testCCompiler.obj
+  cmTryCompileExec635657625.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec635657625.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "cmTryCompileExec635657625.dir\Debug\cmTryCom.DDDB71F3.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTryCompileExec635657625.dir\Debug\cmTryCom.DDDB71F3.tlog\cmTryCompileExec635657625.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec635657625.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:01.06
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec4145955736.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:49 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec4145955736.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec4145955736.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec4145955736.dir\Debug\cmTryCom.99BE3469.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec4145955736.dir\Debug\cmTryCom.99BE3469.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4145955736.dir\Debug\\" /Fd"cmTryCompileExec4145955736.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"cmTryCompileExec4145955736.dir\Debug\\" /Fd"cmTryCompileExec4145955736.dir\Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4145955736.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4145955736.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec4145955736.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec4145955736.dir\Debug\CMakeCCompilerABI.obj
+  cmTryCompileExec4145955736.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec4145955736.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "cmTryCompileExec4145955736.dir\Debug\cmTryCom.99BE3469.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTryCompileExec4145955736.dir\Debug\cmTryCom.99BE3469.tlog\cmTryCompileExec4145955736.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec4145955736.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.64
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec3371148452.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:50 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3371148452.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec3371148452.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec3371148452.dir\Debug\cmTryCom.6EA7D22D.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec3371148452.dir\Debug\cmTryCom.6EA7D22D.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3371148452.dir\Debug\\" /Fd"cmTryCompileExec3371148452.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3371148452.dir\Debug\\" /Fd"cmTryCompileExec3371148452.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3371148452.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3371148452.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3371148452.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3371148452.dir\Debug\testCXXCompiler.obj
+  cmTryCompileExec3371148452.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3371148452.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "cmTryCompileExec3371148452.dir\Debug\cmTryCom.6EA7D22D.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTryCompileExec3371148452.dir\Debug\cmTryCom.6EA7D22D.tlog\cmTryCompileExec3371148452.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3371148452.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.62
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec3732273631.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:51 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3732273631.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec3732273631.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec3732273631.dir\Debug\cmTryCom.E1B76362.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec3732273631.dir\Debug\cmTryCom.E1B76362.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3732273631.dir\Debug\\" /Fd"cmTryCompileExec3732273631.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3732273631.dir\Debug\\" /Fd"cmTryCompileExec3732273631.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.2\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3732273631.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3732273631.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3732273631.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3732273631.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTryCompileExec3732273631.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3732273631.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "cmTryCompileExec3732273631.dir\Debug\cmTryCom.E1B76362.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTryCompileExec3732273631.dir\Debug\cmTryCom.E1B76362.tlog\cmTryCompileExec3732273631.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3732273631.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.78
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec1193498294.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:53 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec1193498294.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec1193498294.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec1193498294.dir\Debug\cmTryCom.798CB5D7.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec1193498294.dir\Debug\cmTryCom.798CB5D7.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1193498294.dir\Debug\\" /Fd"cmTryCompileExec1193498294.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\feature_tests.cxx"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec1193498294.dir\Debug\\" /Fd"cmTryCompileExec1193498294.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\feature_tests.cxx"
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1193498294.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1193498294.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec1193498294.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec1193498294.dir\Debug\feature_tests.obj
+  cmTryCompileExec1193498294.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec1193498294.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "cmTryCompileExec1193498294.dir\Debug\cmTryCom.798CB5D7.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTryCompileExec1193498294.dir\Debug\cmTryCom.798CB5D7.tlog\cmTryCompileExec1193498294.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec1193498294.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.62
+
+
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:0cxx_alignas
+    Feature record: CXX_FEATURE:0cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:0cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:0cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:0cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:0cxx_deleted_functions
+    Feature record: CXX_FEATURE:0cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:0cxx_func_identifier
+    Feature record: CXX_FEATURE:0cxx_generalized_initializers
+    Feature record: CXX_FEATURE:0cxx_generic_lambdas
+    Feature record: CXX_FEATURE:0cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:0cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:0cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:0cxx_noexcept
+    Feature record: CXX_FEATURE:0cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:0cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:0cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:0cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:0cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:0cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:0cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:0cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
+Determining if the Q_WS_WIN exist passed with the following output:
+Change Dir: C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/12.0/bin/MSBuild.exe" "cmTryCompileExec3027470366.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=12.0"
+Microsoft (R) Build Engine, versi¢n 12.0.21005.1
+[Microsoft .NET Framework, versi¢n 4.0.30319.18449]
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Compilaci¢n iniciada a las 20/05/2015 8:38:56 a. m..
+Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3027470366.vcxproj" en nodo 1 (destinos predeterminados).
+PrepareForBuild:
+  Creando directorio "cmTryCompileExec3027470366.dir\Debug\".
+  Creando directorio "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\".
+  Creando directorio "cmTryCompileExec3027470366.dir\Debug\cmTryCom.22661849.tlog\".
+InitializeBuildStatus:
+  Se crear  "cmTryCompileExec3027470366.dir\Debug\cmTryCom.22661849.tlog\unsuccessfulbuild" porque se especific¢ "AlwaysCreate".
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3027470366.dir\Debug\\" /Fd"cmTryCompileExec3027470366.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  Compilador de optimizaci¢n de C/C++ de Microsoft (R) versi¢n 18.00.21005.1 para x86
+  (C) Microsoft Corporation. Reservados todos los derechos.
+  
+  cl /c /IC:\Qt\4.8.4\include /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cmTryCompileExec3027470366.dir\Debug\\" /Fd"cmTryCompileExec3027470366.dir\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:queue "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\CheckSymbolExists.cxx"
+  
+  CheckSymbolExists.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3027470366.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3027470366.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/Debug/cmTryCompileExec3027470366.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTryCompileExec3027470366.dir\Debug\CheckSymbolExists.obj
+  cmTryCompileExec3027470366.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec3027470366.exe
+FinalizeBuildStatus:
+  Se eliminar  el archivo "cmTryCompileExec3027470366.dir\Debug\cmTryCom.22661849.tlog\unsuccessfulbuild".
+  Aplicando tarea Touch a "cmTryCompileExec3027470366.dir\Debug\cmTryCom.22661849.tlog\cmTryCompileExec3027470366.lastbuildstate".
+Compilaci¢n del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\CMakeTmp\cmTryCompileExec3027470366.vcxproj" (destinos predeterminados).
+
+Compilaci¢n correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:00:00.85
+
+File C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

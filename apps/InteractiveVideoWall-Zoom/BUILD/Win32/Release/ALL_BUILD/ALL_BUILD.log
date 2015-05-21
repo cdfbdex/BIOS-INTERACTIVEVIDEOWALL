@@ -1,0 +1,10 @@
+﻿Compilación iniciada a las 20/05/2015 8:41:35 a. m..
+     1>Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\ALL_BUILD.vcxproj" en el nodo 2 (Build destinos).
+     1>CustomBuild:
+         Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/CMakeLists.txt
+         CMake does not need to re-run because C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\CMakeFiles\generate.stamp is up-to-date.
+     1>Compilación del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\ALL_BUILD.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:00.09

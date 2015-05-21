@@ -1,0 +1,70 @@
+﻿Build started 19/05/2015 4:44:41 p. m..
+     1>Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\3rdparty\cvblob\lib\cvblob.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\lib\Release\".
+       InitializeBuildStatus:
+         Creating "cvblob.dir\Release\cvblob.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       CustomBuild:
+         Building Custom Rule C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/3rdparty/cvblob/cvBlob/CMakeLists.txt
+         CMake does not need to re-run because C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\3rdparty\cvblob\lib\CMakeFiles\generate.stamp is up-to-date.
+       MakeDirsForCl:
+         Creating directory "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\3rdparty\cvblob\lib\Release".
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D cvblob_EXPORTS /D _WINDLL /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"cvblob.dir\Release\\" /Fd"cvblob.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\..\3rdparty\cvblob\cvBlob\cvblob.cpp ..\..\..\..\3rdparty\cvblob\cvBlob\cvlabel.cpp ..\..\..\..\3rdparty\cvblob\cvBlob\cvaux.cpp ..\..\..\..\3rdparty\cvblob\cvBlob\cvcontour.cpp ..\..\..\..\3rdparty\cvblob\cvBlob\cvtrack.cpp ..\..\..\..\3rdparty\cvblob\cvBlob\cvcolor.cpp
+         cvblob.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         cvlabel.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>..\..\..\..\3rdparty\cvblob\cvBlob\cvlabel.cpp(98): warning C4800: 'cvb::CvLabel' : forcing value to bool 'true' or 'false' (performance warning)
+     1>..\..\..\..\3rdparty\cvblob\cvBlob\cvlabel.cpp(148): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\3rdparty\cvblob\cvBlob\cvlabel.cpp(148): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\3rdparty\cvblob\cvBlob\cvlabel.cpp(437): warning C4018: '<' : signed/unsigned mismatch
+     1>..\..\..\..\3rdparty\cvblob\cvBlob\cvlabel.cpp(437): warning C4018: '<' : signed/unsigned mismatch
+         cvaux.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         cvcontour.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         cvtrack.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+     1>..\..\..\..\3rdparty\cvblob\cvBlob\cvtrack.cpp(335): warning C4297: 'cvb::cvUpdateTracks' : function assumed not to throw an exception but does
+                 __declspec(nothrow) or throw() was specified on the function
+     1>..\..\..\..\3rdparty\cvblob\cvBlob\cvtrack.cpp(335): warning C4297: 'cvb::cvUpdateTracks' : function assumed not to throw an exception but does
+                 __declspec(nothrow) or throw() was specified on the function
+         cvcolor.cpp
+     1>c:\opencv\build\include\opencv2\flann\logger.h(66): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\stdio.h(234) : see declaration of 'fopen'
+         Generating Code...
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcolor.cpp(102): warning C4715: 'cvBlobMeanColor' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcontour.cpp(217): warning C4715: 'cvContourPolygonPerimeter' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcontour.cpp(200): warning C4715: 'cvContourChainCodePerimeter' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcontour.cpp(178): warning C4715: 'cvContourPolygonArea' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcontour.cpp(235): warning C4715: 'cvContourPolygonCircularity' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcontour.cpp(124): warning C4715: 'cvConvertChainCodesToPolygon' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcontour.cpp(324): warning C4715: 'cvSimplifyPolygon' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvcontour.cpp(378): warning C4715: 'cvPolygonContourConvexHull' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvlabel.cpp(442): warning C4715: 'cvGetLabel' : not all control paths return a value
+     1>c:\aplicaciones_muro\bios-interactivevideowall\3rdparty\cvblob\cvblob\cvlabel.cpp(361): warning C4715: 'cvLabel' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\lib\Release\cvblob.dll" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2411.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib C:\opencv\build\x86\vc10\lib\opencv_superres2411.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2411.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2411.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2411.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2411.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2411.lib C:\opencv\build\x86\vc10\lib\opencv_photo2411.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2411.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2411.lib C:\opencv\build\x86\vc10\lib\opencv_video2411.lib C:\opencv\build\x86\vc10\lib\opencv_ml2411.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2411.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2411.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2411.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2411.lib C:\opencv\build\x86\vc10\lib\opencv_flann2411.lib C:\opencv\build\x86\vc10\lib\opencv_core2411.lib /MANIFEST /ManifestFile:"cvblob.dir\Release\cvblob.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib/Release/cvblob.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib/Release/cvblob.lib" /MACHINE:X86 /DLL cvblob.dir\Release\cvblob.obj
+         cvblob.dir\Release\cvlabel.obj
+         cvblob.dir\Release\cvaux.obj
+         cvblob.dir\Release\cvcontour.obj
+         cvblob.dir\Release\cvtrack.obj
+         cvblob.dir\Release\cvcolor.obj  /machine:X86 
+            Creating library C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib/Release/cvblob.lib and object C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib/Release/cvblob.exp
+         cvblob.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\lib\Release\cvblob.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\lib\Release\cvblob.dll;#2" /manifest cvblob.dir\Release\cvblob.dll.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "cvblob.dir\Release\cvblob.unsuccessfulbuild".
+         Touching "cvblob.dir\Release\cvblob.lastbuildstate".
+     1>Done Building Project "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\3rdparty\cvblob\lib\cvblob.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:06.65

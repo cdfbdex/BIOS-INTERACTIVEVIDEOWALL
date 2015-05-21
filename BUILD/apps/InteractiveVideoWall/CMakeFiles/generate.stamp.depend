@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall/CMakeLists.txt
+C:/opencv/build/OpenCVConfig-version.cmake
+C:/opencv/build/OpenCVConfig.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVConfig.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules-debug.cmake
+C:/opencv/build/x86/vc10/lib/OpenCVModules-release.cmake
+C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/cvBlobConfig.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/FindQt4.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/CheckCXXSymbolExists.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/CheckSymbolExists.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/MacroAddFileDependencies.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/FindPackageMessage.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/CMakeParseArguments.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/CMakePushCheckState.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/Qt4ConfigDependentSettings.cmake
+C:/Program Files (x86)/CMake/share/cmake-3.2/Modules/Qt4Macros.cmake

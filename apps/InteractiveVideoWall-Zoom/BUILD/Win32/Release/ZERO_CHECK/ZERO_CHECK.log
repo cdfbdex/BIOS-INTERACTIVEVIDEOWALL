@@ -1,0 +1,13 @@
+﻿Compilación iniciada a las 20/05/2015 8:41:25 a. m..
+     1>Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\ZERO_CHECK.vcxproj" en el nodo 2 (Build destinos).
+     1>CustomBuild:
+         Checking Build System
+         CMake does not need to re-run because C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/3rdparty/cvblob/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/3rdparty/cvblob/lib/CMakeFiles/generate.stamp is up-to-date.
+         CMake does not need to re-run because C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/apps/InteractiveVideoWall-Zoom/BUILD/apps/InteractiveVideoWall/CMakeFiles/generate.stamp is up-to-date.
+     1>Compilación del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\InteractiveVideoWall-Zoom\BUILD\ZERO_CHECK.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:00.45

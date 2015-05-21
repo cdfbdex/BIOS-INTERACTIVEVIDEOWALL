@@ -1,0 +1,29 @@
+﻿Compilación iniciada a las 21/05/2015 10:55:42 a. m..
+     1>Proyecto "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\MultiUserInteractionTUIO\MultiUserInteraction.vcxproj" en el nodo 2 (Build destinos).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /IC:\opencv\build\include /IC:\opencv\build\include\opencv /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\3rdparty\cvblob\include" /I"C:\Program Files (x86)\OpenNI2\Include" /I"C:\Program Files (x86)\PrimeSense\NiTE2\Include" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\MultiUserInteractionTUIO\..\..\3rdparty\cvblob\include" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\MultiUserInteractionTUIO\..\..\3rdparty\oscpack" /I"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\apps\MultiUserInteractionTUIO\..\..\3rdparty\TUIO" /nologo /W3 /WX- /O2 /Ob2 /Oy- /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"Release\"" /D _MBCS /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"MultiUserInteraction.dir\Release\\" /Fd"MultiUserInteraction.dir\Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\apps\MultiUserInteractionTUIO\main.cpp
+         main.cpp
+     1>..\..\..\apps\MultiUserInteractionTUIO\main.cpp(299): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>..\..\..\apps\MultiUserInteractionTUIO\main.cpp(300): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\MultiUserInteraction.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib" /LIBPATH:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/lib/Release" /LIBPATH:"C:/Program Files (x86)/OpenNI2/Lib/OpenNI2.lib" /LIBPATH:"C:/Program Files (x86)/OpenNI2/Lib/OpenNI2.lib/Release" /LIBPATH:"C:/Program Files (x86)/PrimeSense/NiTE2/Lib/NiTE2.lib" /LIBPATH:"C:/Program Files (x86)/PrimeSense/NiTE2/Lib/NiTE2.lib/Release" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib "C:\Program Files (x86)\OpenNI2\Lib\OpenNI2.lib" "C:\Program Files (x86)\PrimeSense\NiTE2\Lib\NiTE2.lib" ..\..\lib\Release\cvblob.lib winmm.lib ws2_32.lib C:\opencv\build\x86\vc10\lib\opencv_videostab2411.lib C:\opencv\build\x86\vc10\lib\opencv_ts2411.lib C:\opencv\build\x86\vc10\lib\opencv_superres2411.lib C:\opencv\build\x86\vc10\lib\opencv_stitching2411.lib C:\opencv\build\x86\vc10\lib\opencv_contrib2411.lib C:\opencv\build\x86\vc10\lib\opencv_nonfree2411.lib C:\opencv\build\x86\vc10\lib\opencv_ocl2411.lib C:\opencv\build\x86\vc10\lib\opencv_gpu2411.lib C:\opencv\build\x86\vc10\lib\opencv_photo2411.lib C:\opencv\build\x86\vc10\lib\opencv_objdetect2411.lib C:\opencv\build\x86\vc10\lib\opencv_legacy2411.lib C:\opencv\build\x86\vc10\lib\opencv_video2411.lib C:\opencv\build\x86\vc10\lib\opencv_ml2411.lib C:\opencv\build\x86\vc10\lib\opencv_calib3d2411.lib C:\opencv\build\x86\vc10\lib\opencv_features2d2411.lib C:\opencv\build\x86\vc10\lib\opencv_highgui2411.lib C:\opencv\build\x86\vc10\lib\opencv_imgproc2411.lib C:\opencv\build\x86\vc10\lib\opencv_flann2411.lib C:\opencv\build\x86\vc10\lib\opencv_core2411.lib /MANIFEST /ManifestFile:"MultiUserInteraction.dir\Release\MultiUserInteraction.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiUserInteraction.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiUserInteraction.lib" /MACHINE:X86 MultiUserInteraction.dir\Release\setIcon.res
+         MultiUserInteraction.dir\Release\main.obj
+         MultiUserInteraction.dir\Release\NetworkingUtils.obj
+         MultiUserInteraction.dir\Release\UdpSocket.obj
+         MultiUserInteraction.dir\Release\IpEndpointName.obj
+         MultiUserInteraction.dir\Release\OscOutboundPacketStream.obj
+         MultiUserInteraction.dir\Release\OscPrintReceivedElements.obj
+         MultiUserInteraction.dir\Release\OscReceivedElements.obj
+         MultiUserInteraction.dir\Release\OscTypes.obj
+         MultiUserInteraction.dir\Release\TuioClient.obj
+         MultiUserInteraction.dir\Release\TuioServer.obj
+         MultiUserInteraction.dir\Release\TuioTime.obj  /machine:X86 
+            Creating library C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiUserInteraction.lib and object C:/APLICACIONES_MURO/BIOS-INTERACTIVEVIDEOWALL/BUILD/bin/Release/MultiUserInteraction.exp
+         MultiUserInteraction.vcxproj -> C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\MultiUserInteraction.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\bin\Release\MultiUserInteraction.exe;#1" /manifest MultiUserInteraction.dir\Release\MultiUserInteraction.exe.intermediate.manifest
+     1>Compilación del proyecto terminada "C:\APLICACIONES_MURO\BIOS-INTERACTIVEVIDEOWALL\BUILD\apps\MultiUserInteractionTUIO\MultiUserInteraction.vcxproj" (Build destinos).
+
+Compilación correcta.
+
+Tiempo transcurrido 00:00:02.17

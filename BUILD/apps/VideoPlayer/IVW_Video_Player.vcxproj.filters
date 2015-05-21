@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\..\apps\VideoPlayer\IVW_mainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\VideoPlayer\IVW_settingsWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\apps\VideoPlayer\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_IVW_mainWindow.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="moc_IVW_settingsWindow.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qrc_qplayer.cxx">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_IVW_mainWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_IVW_settingsWindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\CMakeLists.txt" />
+    <CustomBuild Include="..\..\CMakeFiles\b9699bd85ae3900cd9f60a0c700634b0\moc_IVW_mainWindow.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\CMakeFiles\b9699bd85ae3900cd9f60a0c700634b0\moc_IVW_settingsWindow.cxx.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\IVW_mainWindow.ui" />
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\IVW_settingsWindow.ui" />
+    <CustomBuild Include="..\..\..\apps\VideoPlayer\qplayer.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\apps\VideoPlayer\IVW_setIcon.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{F606874C-C703-4A6F-A128-5C5E7378E362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{F4B5AD7A-A6FF-4030-A4C7-E551646706F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{03ADEF0C-6A01-453E-BABD-0233C180A1EF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
